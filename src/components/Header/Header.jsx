@@ -3,14 +3,14 @@ import React from 'react'
 import styles from './Header.module.scss'
 import Link from 'next/link'
 
-const Cost = ({name, cost}) => {
+const Cost = ({name, price}) => {
     return (
         <div className={styles.topPrices__costCtr}>
             <div className={styles.costCtr__name}>
                 {name}
             </div>
             <div className={styles.costCtr__cost}>
-                {cost}
+                {price}
             </div>
         </div>
     )
