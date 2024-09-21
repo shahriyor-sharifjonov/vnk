@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner";
+import Category from "@/components/Category/Category";
 import Header from "@/components/Header/Header";
 import Head from "next/head";
 import Image from "next/image";
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <Banner />
       <Header />
+      <Category />
     </>
   );
 }
