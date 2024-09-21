@@ -1,0 +1,197 @@
+@import "@/styles/mixins.scss";
+.header {
+    @include res('width', 1440px);
+    @include res('padding-left', 72px);
+    @include res('padding-right', 72px);
+    @include res('padding-top', 12px);
+    @include res('padding-bottom', 12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include res('gap', 12px);
+    .header__topContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        .header__topContainer__locationBar{
+            display: flex;
+            align-items: center;
+            @include res('gap', 12px);
+            svg{
+                @include res('width', 18px);
+                @include res('height', 18px);
+            }
+            .locationBar__name{
+                display: flex;
+                align-items: center;
+                @include res('gap', 4px);
+                @include res('width', 132px);
+                @include res('height', 24px);
+                span{
+                    color: var(--Gray-500, #868686);
+                    @include res('font-size', 16px);
+                    font-style: normal;
+                    font-weight: 600;
+                    @include res('line-height', 24px);
+                    // letter-spacing: 0.48px;
+                }
+                svg{
+                    @include res('width', 16px);
+                    @include res('height', 16px);
+                }
+            }
+        }
+        .header__topContainer__navBar{
+            display: flex;
+            align-items: center;
+            @include res('gap', 12px);
+            @include res('width', 644px);
+            @include res('height', 32px);
+            .navBar__link{
+                font-family: Manrope;
+                @include res('font-size', 16px);
+                @include res('font-height', 24px);
+                text-decoration: none;
+                font-style: normal;
+                font-weight: 600;
+                color: var(--Gray-500, #868686);
+                &.navBar__greenBtn{
+                    @include res('padding-top', 4px);
+                    @include res('padding-bottom', 4px);
+                    @include res('padding-right', 12px);
+                    @include res('padding-left', 12px);
+                    @include res('border-radius', 8px);
+                    background: var(--Green-400, #8DF04A);
+                    color: var(--Black-Green, #142B02);
+                }
+            }
+        }
+    }
+    .header__bottomContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include res('gap', 32px);
+        align-self: stretch;
+        .header__bottomContainer__logoCtr{
+            display: flex;
+            align-items: flex-start;
+            @include res('gap', 24px);
+            img{
+                @include res('width', 173px);
+                @include res('height', 49px);
+            }
+            .logoCtr__catalogBtn{
+                display: flex;
+                align-items: center;
+                color: var(--Black-Green, #142B02);
+                font-weight: 600;
+                text-decoration: none;
+                background: var(--Green-400, #8DF04A);  
+                @include res('padding-top', 14px);
+                @include res('padding-bottom', 14px);
+                @include res('padding-left', 16px);
+                @include res('padding-right', 16px);
+                @include res('border-radius', 8px);
+                @include res('gap', 12px);  
+                @include res('font-size', 16px);
+                svg{
+                    @include res('width', 24px);
+                    @include res('height', 24px);
+                }
+            }
+        }
+
+        .header__bottomContainer__searchWrp {
+            @include res('width', 570px);
+            @include res('padding-top', 4px);
+            @include res('padding-bottom', 4px);
+            @include res('padding-right', 16px);
+            @include res('padding-left', 16px);
+            @include res('border-radius', 32px);
+            @include res('border-width', 2px);
+            border-color: #DFF9CA;
+            border-style: solid;
+            background: #FFF;
+            .searchWrp__searchCtr{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                input.searchCtr__searchInput{
+                    @include res('width', 392px);
+                    font-weight: 500;
+                    background-color: transparent;
+                    outline: none;
+                    border: none;
+                    color: black;
+                    @include res('font-size', 16px);
+                    &::placeholder{
+                        color: #B0B0B0;
+                        @include res('font-size', 16px);
+                    }
+                }
+                .searchCtr__searchBtn{
+                    @include res('border-radius', 32px);
+                    @include res('padding', 10px);
+                    display: flex;
+                    // padding: 10px;
+                    justify-content: center;
+                    @include res('gap', 4px);
+                    align-items: center;
+                    background: #9AE169;
+                    svg{
+                        @include res('width', 20px);
+                        @include res('height', 20px);
+                    }
+                }
+            }
+        }
+
+        .header__bottomContainer__linksCtr{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include res('gap', 24px);
+            .linksCtr__link{
+                display: flex;
+                @include res('padding', 12px);
+                @include res('border-radius', 8px);
+                flex-direction: column;
+                align-items: center;
+                color: var(--Green-700, #266D00);
+                text-decoration: none;
+                @include res('font-size', 16px);
+                font-weight: 600;
+                svg{
+                    @include res('width', 34px);
+                    @include res('height', 24px);
+                }
+            }
+        }
+    }
+}
+
+.topPrices{
+    display: flex;
+    @include res("width", 1296px);
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .topPrices__costCtr{
+        display: flex;
+        align-items: center;
+        @include res("gap", 8px);
+        .costCtr__name{
+            @include res("font-size", 24px);
+            font-weight: 500;
+            color: var(--Gray-300, #B0B0B0);
+        }
+        .costCtr__cost{
+            @include res("font-size", 24px);
+            font-weight: 500;
+            color: var(--Black-Green, #142B02);
+        }
+
+    }
+}

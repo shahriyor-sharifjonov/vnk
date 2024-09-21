@@ -1,0 +1,56 @@
+// Тема по умолчанию
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@import "./mixins.scss";
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Manrope', sans-serif;
+  &:focus,
+  &:active{
+    outline: none;
+  }
+}
+html,
+body{
+  height: 100%;
+  background-color: #fff;
+}
+
+.wrapper{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  .main{
+    flex: 1 1 auto;
+  }
+}
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+a{
+  color: inherit;
+}
+ul{
+  list-style-type: none;
+}
+body{
+  font-size: 16px;
+}
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  @include res('width', 1194px);
+  @include media(576){
+    @include resa('width', 360px);
+  }
+}
+.title{
+  @include res('font-size', 32px);
+  @include media(576){
+    @include resa('font-size', 24px);
+  }
+}
