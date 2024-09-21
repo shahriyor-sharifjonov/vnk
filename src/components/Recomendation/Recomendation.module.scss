@@ -102,6 +102,7 @@
         justify-content: space-between;
         align-items: flex-start;
         align-self: stretch;
+        
         .productName{
             display: flex;
             align-items: center;
@@ -113,6 +114,11 @@
             @include res("gap", 4px);
         }
         .like{
+            @include res("width", 20px);
+            @include res("height", 20px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             .likeSvg{
                 @include res("width", 20px);
                 @include res("height", 20px);
