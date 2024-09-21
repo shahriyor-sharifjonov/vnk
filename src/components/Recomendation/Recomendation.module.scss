@@ -1,0 +1,153 @@
+@import "@/styles/mixins.scss";
+
+.heading{
+    color: var(--Black-Green, #142B02);
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    @include res("font-size", 36px);
+    @include res("width", 1296px);
+    @include res("margin-top", 96px);
+}
+.recomendsCtr{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    @include res("gap", 24px);
+    @include res("width", 1296px);
+    @include res("margin-top", 64px);
+    
+}
+
+.recomendsCards {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    flex-wrap: wrap;
+    @include res("width", 980px);
+    @include res("column-gap", 12px);
+    @include res("row-gap", 24px);
+}
+
+.productCard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-style: solid;
+    border-color: #EAEAEA;
+    background: #FFF;
+    overflow: hidden;
+    @include res("border-radius", 16px);
+    @include res("border-width", 1px);
+    @include res("width", 236px);
+    @include res("gap", 10px);
+}
+
+.cardImgCtr {
+    position: relative;
+    background-color: #F5F7FD;
+    @include res("height", 236px);   
+    @include res("width", 236px);
+}
+
+.cardImg{
+    width: max-content;
+    height: max-content;
+    @include res("width", 236px);
+}
+
+.tags{
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    @include res("gap", 6px);
+    @include res("bottom", 8px);
+    @include res("left", 8px);
+    .green,
+    .red{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: white;
+        @include res("gap", 10px);
+        @include res("padding-top", 2px);
+        @include res("padding-right", 8px);
+        @include res("padding-left", 8px);
+        @include res("padding-bottom", 4px);
+        @include res("font-size", 12px);   
+        @include res("border-radius", 49px);
+    }
+    .red{
+        background: #F22;
+    }
+    .green{
+        background: #60CD1A;
+    }
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    @include res("padding-top", 6px);
+    @include res("padding-bottom", 6px);
+    @include res("padding-left", 10px);
+    @include res("padding-right", 10px);
+    .cardDescr{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+        .productName{
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--Green-600, #439F00);
+            @include res("font-size", 14px);
+            @include res("line-height", 18px);
+            @include res("width", 186px);
+            @include res("gap", 4px);
+        }
+        .like{
+            .likeSvg{
+                @include res("width", 20px);
+                @include res("height", 20px);
+            }
+        }
+    }
+    .price{
+        @include res("font-size", 14px);
+        @include res("margin-top", 8px);
+    }
+    .address{
+        color: var(--Gray-300, #B0B0B0);
+        @include res("font-size", 12px);
+        @include res("margin-top", 12px);
+    }
+    .date{
+        color: var(--Gray-300, #B0B0B0);
+        @include res("font-size", 12px);
+        @include res("margin-top", 4px);
+    }
+}
+
+.adsBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Green-900, #154300);  
+    font-weight: 700;
+    text-align: center;
+    color: var(--White, #FFF);
+    @include res("font-size", 32px);
+    @include res("width", 292px);
+    @include res("height", 984px);
+    @include res("padding", 12px);
+    @include res("gap", 24px);
+    @include res("border-radius", 20px);
+}

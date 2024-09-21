@@ -1,8 +1,14 @@
+import SliderAds from "@/components/Advertisements/SliderAds";
 import Banner from "@/components/Banner/Banner";
 import Category from "@/components/Category/Category";
 import Header from "@/components/Header/Header";
+import Videos from "@/components/Videos/Videos";
 import Head from "next/head";
 import Image from "next/image";
+import Recomendation from "@/components/Recomendation/Recomendation"
+import SecondBanner from "@/components/Advertisements/SecondBanner";
+import Popular from "@/components/Popular/Popular";
+
 
 export default function Home() {
   return (
@@ -16,6 +22,11 @@ export default function Home() {
       <Banner />
       <Header />
       <Category />
+      <SliderAds />
+      <Videos />
+      <Recomendation />
+      <SecondBanner />
+      <Popular /> 
     </>
   );
 }

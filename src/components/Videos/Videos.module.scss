@@ -1,0 +1,36 @@
+@import "@/styles/mixins.scss";
+
+.videosCtr{
+    margin-left: auto;
+    margin-right: auto;
+    @include res("margin-top", 94px);
+    @include res("padding-top", 64px);
+    @include res("padding-bottom", 64px);
+    @include res("width", 1296px);
+    @include res("gap", 24px);
+}
+
+.videosWrapper{
+    overflow-x: scroll;
+    display: flex;
+    @include res("gap", 24px);
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+.videoCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    padding-bottom: 0;
+    padding-top: 0;
+    color: #FFF;
+    background: var(--Black-Green, #142B02);
+    @include res("border-radius", 100px);
+    @include res("font-size", 32px);
+    @include res("height", 144px);
+    @include res("width", 144px);
+    @include res("padding-left", 23px);
+    @include res("padding-right", 23px);
+}

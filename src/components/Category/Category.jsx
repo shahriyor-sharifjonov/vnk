@@ -19,45 +19,45 @@ const Category = () => {
     return (
         <div className={styles.category}>
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Нефтепродукты'} 
                 imgSrc={'/Image.png'} 
                 cardClass={styles.yellow} 
             />
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Агрохимия'} 
                 imgSrc={'/Image1.png'} 
                 cardClass={styles.green} 
             />
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Спец. техника'} 
                 imgSrc={'/Image2.png'} 
                 cardClass={styles.gray} 
             />
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Реализация урожая'} 
                 imgSrc={'/Image3.png'} 
                 cardClass={styles.lightGreen} 
             />
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Готовый бизнес'} 
                 imgSrc={'/Image4.png'} 
                 cardClass={styles.lightYellow} 
                 large={true}
             />
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Недвижимость'} 
                 imgSrc={'/Image5.png'} 
                 cardClass={styles.gray} 
                 large={true}
             />
             <CategoryCard 
-                href='/' 
+                href='#!' 
                 name={'Услуги'} 
                 imgSrc={'/Image6.png'} 
                 cardClass={styles.middleYellow} 

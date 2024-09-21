@@ -54,3 +54,14 @@ body{
     @include resa('font-size', 24px);
   }
 }
+.adsslider{
+  .swiper-pagination-bullet {
+    background: var(--Green-50, #FAFFF6);
+    @include res("width", 36px);
+    @include res("height", 6px);
+    @include res("border-radius", 64px);
+  }
+  .swiper-pagination-bullet-active {
+      background: var(--Green-400, #8DF04A);
+  }
+}

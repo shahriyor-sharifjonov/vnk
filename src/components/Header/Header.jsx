@@ -78,18 +78,18 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles.header__topContainer__navBar}>
-                    <a href="" className={styles.navBar__link}>Франшиза</a>
-                    <a href="" className={styles.navBar__link}>Инвестиции</a>
-                    <a href="" className={styles.navBar__link}>Мобильное приложение</a>
-                    <a href="" className={`${styles.navBar__link} ${styles.navBar__greenBtn}`}>Разместить объявление</a>
+                    <Link href="#!" className={styles.navBar__link}>Франшиза</Link>
+                    <Link href="#!" className={styles.navBar__link}>Инвестиции</Link>
+                    <Link href="#!" className={styles.navBar__link}>Мобильное приложение</Link>
+                    <Link href="#!" className={`${styles.navBar__link} ${styles.navBar__greenBtn}`}>Разместить объявление</Link>
                 </div>
             </div>
             <div className={styles.header__bottomContainer}>
                 <div className={styles.header__bottomContainer__logoCtr}>
-                    <Link href='/'>
+                    <Link href='#!' className={styles.logo}>
                         <img src="/Logo.png" alt="" />
                     </Link>
-                    <Link href='/' className={styles.logoCtr__catalogBtn}>
+                    <Link href='#!' className={styles.logoCtr__catalogBtn}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
@@ -149,7 +149,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles.header__bottomContainer__linksCtr}>
-                    <Link href='/' className={styles.linksCtr__link}>
+                    <Link href='#!' className={styles.linksCtr__link}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={25}
@@ -177,7 +177,7 @@ const Header = () => {
                         </svg>
                         Избранное
                     </Link>
-                    <Link href='/' className={styles.linksCtr__link}>
+                    <Link href='#!' className={styles.linksCtr__link}>
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={24}
@@ -206,7 +206,7 @@ const Header = () => {
 
                         Войти
                     </Link>
-                    <Link href='/' className={styles.linksCtr__link}>
+                    <Link href='#!' className={styles.linksCtr__link}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={25}

@@ -3,30 +3,56 @@
 
 .category{
     display: flex;
-    @include res("width", 1296px);
-    @include res("gap", 24px);
-    @include res("margin-top", 64px);
     margin-left: auto;
     margin-right: auto;
     align-items: flex-start;
     align-content: flex-start;
     flex-wrap: wrap;
+    @include res("width", 1296px);
+    @include res("gap", 24px);
+    @include res("margin-top", 64px);
+    @include media(1024){
+        @include rest("width", 936px);
+        @include rest("gap", 24px);
+        @include rest("margin-top", 43px);
+    }
+    @include media(768){
+        @include resm("width", 696px);
+        @include resm("gap", 24px);
+        @include resm("margin-top", 36px);
+    }
     .category__card{
         display: flex;
-        @include res("width", 306px);
-        @include res("height", 214px);
-        @include res("padding", 24px);
-        @include res("gap", 10px);
         flex-direction: column;
         align-items: flex-start;
         position: relative;
         flex-shrink: 0;
-        @include res("border-radius", 24px);
         overflow: hidden;
         text-decoration: none;
+        @include res("border-radius", 24px);
+        @include res("width", 306px);
+        @include res("height", 214px);
+        @include res("padding", 24px);
+        @include res("gap", 10px);
+        @include media(1024){
+            @include rest("border-radius", 24px);
+            @include rest("width", 216px);
+            @include rest("height", 164px);
+            @include rest("padding", 16px);
+            @include rest("gap", 10px);
+        }
+        @include media(768){
+            @include resm("border-radius", 24px);
+            @include resm("width", 216px);
+            @include resm("height", 132px);
+            @include resm("padding", 16px);
+            @include resm("gap", 10px);
+        }
         &.large{
             @include res("width", 416px);
-
+            @include media(1024){
+                @include rest("width", 296px);
+            }
         }
         &.yellow{   
             background: var(--Yellow-300, #FFF26D);
@@ -47,15 +73,24 @@
             background: var(--Yellow-200, #FFF197);
         }
         .card__name{
-            @include res("font-size", 24px);
             font-weight: 600;
+            @include res("font-size", 24px);
+            @include media(1024){
+                @include rest("font-size", 20px);
+            }
         }
         .card__img{
-            @include res("width", 180px);
-            @include res("height", 167px);
             position: absolute;
             @include res("right", -24px);
             @include res("bottom", -39px);
+            @include res("width", 180px);
+            @include res("height", 167px);
+            @include media(1024){
+                @include rest("right", -28px);
+                @include rest("bottom", -30px);
+                @include rest("width", 148px);
+                @include rest("height", 137px);
+            }
         }
     }
 }

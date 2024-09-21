@@ -1,0 +1,68 @@
+@import "@/styles/mixins.scss";
+
+
+.slider{
+    background: var(--Black-Green, #142B02);
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    color: var(--Green-100, #DFF9CA);
+    @include res("margin-top", 96px);
+    @include res("width", 1296px);
+    @include res("height", 246px);
+    @include res("border-radius", 24px);
+}
+
+.slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    @include res("width", 1296px);
+    @include res("height", 246px);
+    @include res("font-size", 36px);
+    font-weight: 700;
+}
+
+.adsBnr{
+    background: #FFF;
+    position: absolute;
+    color: #142B02;
+    font-weight: 700;
+    @include res("font-size", 12px);
+    @include res("bottom", 16px);
+    @include res("right", 16px);
+    @include res("border-radius", 11px);
+    @include res("padding-top", 6px);
+    @include res("padding-bottom", 6px);
+    @include res("padding-right", 8px);
+    @include res("padding-left", 8px);
+}
+
+.paginationCustom {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include res("gap", 18px);
+}
+
+.secondBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--Green-900, #154300);  
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--White, #FFF);
+    @include res("margin-top", 72px);
+    @include res("font-size", 64px);
+    @include res("width", 1296px);
+    @include res("height", 480px);
+    @include res("border-radius", 24px);
+}
