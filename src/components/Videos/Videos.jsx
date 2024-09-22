@@ -11,8 +11,6 @@ export default function Videos() {
   return (
     <div className={styles.videosCtr}>
       <Swiper
-        // modules={[ A11y]}
-        // spaceBetween={0}    
         slidesPerView={9}    
       >
         <SwiperSlide>
