@@ -1,40 +1,81 @@
-import React from 'react'
-import styles from './Videos.module.scss'
-
+import React from 'react';
+import styles from './Videos.module.scss';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export default function Videos() {
   return (
     <div className={styles.videosCtr}>
-        <div className={styles.videosWrapper}>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-            <div className={styles.videoCard}>
-                Видео
-            </div>
-        </div>
+      <Swiper
+        // modules={[ A11y]}
+        // spaceBetween={0}    
+        slidesPerView={9}    
+      >
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className={styles.videoCard}>
+            Видео
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
-  )
+  );
 }
-

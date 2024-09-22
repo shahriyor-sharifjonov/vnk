@@ -19,8 +19,8 @@ $baseValueTablet: 1024px;
 $baseValueMedium: 768px;
 $baseValueSmall: 320px;
 
-@mixin res($property, $value) {
-  #{$property}: calc(($value / $baseValueLarge) * 100vw);
+@mixin res($property, $value, $important: false) {
+  #{$property}: calc(($value / $baseValueLarge) * 100vw) #{if($important, '!important', '')};
 }
 @mixin rest($property, $value) {
     #{$property}: calc(($value / $baseValueTablet) * 100vw);

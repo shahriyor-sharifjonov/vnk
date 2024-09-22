@@ -16,6 +16,7 @@ html,
 body{
   height: 100%;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 .wrapper{
@@ -65,3 +66,10 @@ body{
       background: var(--Green-400, #8DF04A);
   }
 }
+.swiper{
+  overflow: visible !important;
+}
+.swiper-wrapper{
+  // width: fit-content !important;
+  // @include res('gap', 24px);
+} 

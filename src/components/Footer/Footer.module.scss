@@ -11,7 +11,86 @@
     @include res('width', 1296px);
     @include res('padding-left', 72px);
     @include res('padding-right', 72px);
-    @include media(992){
-        
+    .mainCtr{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        @include res('gap', 48px);
+        .topCtr{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-self: stretch;
+            .section{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                @include res('width', 264px);
+                @include res('gap', 32px);
+                .h4{
+                    color: #272727;
+                    font-weight: 700;
+                    @include res('font-size', 24px);
+                }
+                .footerLinksCtr{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 12px;
+                    @include res('gap', 12px);
+                    .footerLink{
+                        font-weight: 600;
+                        color: var(--Gray-500, #868686);
+                        text-decoration: none;
+                        @include res('font-size', 16px);
+                    }
+                }
+                &.last{
+                    @include res('width', 171px);
+                    @include res('padding-top', 70px);
+                    @include res('padding-bottom', 70px);
+
+                }
+            }
+        }
+        .bottomCtr{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            .apps{
+                display: flex;
+                align-items: center;
+                @include res('gap', 16px);
+                .img{
+                    @include res('width', 135px);
+                    @include res('height', 40px);
+                }
+            }
+            .socials{
+                display: flex;
+                align-items: flex-end;
+                @include res('gap', 16px);
+                .img{
+                    @include res('width', 32px);
+                    @include res('height', 32px);
+                }
+            }
+
+        }
+    }
+    .copyrightCtr{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;        
+        @include res('padding-top', 40px);
+        @include res('padding-bottom', 40px);
+        .span{
+            color: var(--Gray-300, #B0B0B0);
+            @include res('font-size', 20px);
+            font-weight: 600;
+        }
     }
 }
