@@ -35,7 +35,7 @@ export default function FuelCard({name, type, logoSrc, logoName, delivery, file,
                 Сертификат
                 </div>
                 <div className={styles.file}>
-                    <a href={file} download>
+                    <a href={file} className={styles.fileLink} download>
                         <svg
                             className={styles.fileSvg}
                             xmlns="http://www.w3.org/2000/svg"

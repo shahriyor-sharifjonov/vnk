@@ -9,6 +9,8 @@ import Recomendation from "@/components/Recomendation/Recomendation"
 import SecondBanner from "@/components/Advertisements/SecondBanner";
 import Popular from "@/components/Popular/Popular";
 import BestFuel from "@/components/BestFuel/BestFuel";
+import OtherProducts from "@/components/OtherProducts/OtherProducts";
+import Footer from "@/components/Footer/Footer";
 
 
 export default function Home() {
@@ -29,6 +31,8 @@ export default function Home() {
       <SecondBanner />
       <Popular /> 
       <BestFuel />
+      <OtherProducts />
+      <Footer />
     </>
   );
 }

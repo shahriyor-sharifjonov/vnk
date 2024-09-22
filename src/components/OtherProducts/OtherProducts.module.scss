@@ -1,0 +1,45 @@
+@import "@/styles/mixins.scss";
+
+
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    @include res('margin-top', 96px);
+    @include res('width', 1296px);
+    .h2{
+        color: #183203;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        @include res('font-size', 36px);
+    }
+    .seeAll{
+        display: flex;
+        color: var(--Green-600, #439F00);
+        text-decoration: none;
+        font-weight: 600;
+        @include res('font-size', 16px);
+        @include res('gap', 4px);
+        .svg{
+            @include res('width', 16px);
+            @include res('height', 16px);
+
+        }
+    }
+}
+.cards{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    @include res('margin-top', 64px);
+    @include res('width', 1296px);
+    @include res('column-gap', 24px);
+    @include res('row-gap', 32px);
+}

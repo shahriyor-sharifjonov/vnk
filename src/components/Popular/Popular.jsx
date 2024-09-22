@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Popular.module.scss';
-import { ProductCard } from '../Recomendation/Recomendation';
+import ProductCard from '../Recomendation/ProductCard';
 
 
 export default function Popular() {
@@ -20,83 +20,107 @@ export default function Popular() {
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
-                />
+                    redTag={true}
+                    greenTag={true}
+                    />
                 <ProductCard 
                     name={'Универсальный трактор TFE-895'}
                     imgSrc={'/ImageProduct.png'}
                     price={'7 000 000'}
                     address={'г. Краснодар, ул. Пушкина, 59'}
                     date={'25 августа 2024'}
+                    redTag={true}
+                    greenTag={true}
                 />
             </div>
         </div>

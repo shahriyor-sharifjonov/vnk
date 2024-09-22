@@ -7,10 +7,10 @@ import FuelCard from './FuelCard'
 
 
 export default function BestFuel() {
-  // Состояние для активного фильтра
+  // начальноке состояние для активного фильтра
   const [activeFilter, setActiveFilter] = useState('Все');
 
-  // Массив топливных карточек
+  // Массив видов карточек
   const fuelCards = [
     {
       type: 'Дизельное топливо',
@@ -186,6 +186,7 @@ export default function BestFuel() {
             litrPrice={card.litrPrice}
           />
         ))}
+        {/* если нет */}
         {!filteredFuelCards.length && (
           <h2>Нету карточек</h2>
         )}

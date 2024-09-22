@@ -66,7 +66,10 @@
     @include res("bottom", 8px);
     @include res("left", 8px);
     .green,
-    .red{
+    .red,
+    .secondGreen,
+    .yellowTag,
+    .otherTags{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -85,6 +88,17 @@
     }
     .green{
         background: #60CD1A;
+    }
+    .secondGreen{
+        background: var(--Green-400, #8DF04A);
+        color: var(--Black-Green, #142B02) !important;
+    }
+    .yellowTag{
+        background: var(--Yellow-300, #FFF26D);
+        color: var(--Black-Green, #142B02) !important;
+    }
+    .otherTags{
+        background: var(--Gray-600, #727272);
     }
 }
 
