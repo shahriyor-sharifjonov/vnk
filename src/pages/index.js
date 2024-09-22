@@ -8,6 +8,7 @@ import Image from "next/image";
 import Recomendation from "@/components/Recomendation/Recomendation"
 import SecondBanner from "@/components/Advertisements/SecondBanner";
 import Popular from "@/components/Popular/Popular";
+import BestFuel from "@/components/BestFuel/BestFuel";
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
       <Recomendation />
       <SecondBanner />
       <Popular /> 
+      <BestFuel />
     </>
   );
 }

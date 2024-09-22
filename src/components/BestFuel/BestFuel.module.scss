@@ -1,2 +1,200 @@
 @import "@/styles/mixins.scss";
 
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    @include res('margin-top', 96px);
+    @include res('width', 1296px);
+    .h2{
+        color: #183203;
+        font-family: Manrope;
+        font-style: normal;
+        font-weight: 700;
+        @include res('font-size', 36px);
+    }
+    .seeAll{
+        display: flex;
+        color: var(--Green-600, #439F00);
+        text-decoration: none;
+        font-weight: 600;
+        @include res('font-size', 16px);
+        @include res('gap', 4px);
+        .svg{
+            @include res('width', 16px);
+            @include res('height', 16px);
+
+        }
+    }
+}
+.filters{       
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-self: stretch;
+    align-items: start;
+    @include res('gap', 12px);
+    @include res('margin-top', 32px);
+    @include res('margin-bottom', 32px);
+    @include res('width', 1296px);
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #F5F7FD;
+        color: #272727;
+        font-weight: 500;
+        @include res('padding-top', 12px);
+        @include res('padding-bottom', 12px);
+        @include res('padding-left', 24px);
+        @include res('padding-right', 24px);
+        @include res('gap', 4px);
+        @include res('border-radius', 32px);
+        &.active{
+            background: rgba(154, 225, 105, 0.20);
+            color: #70A44D;
+        }
+    }
+}
+.fuelCards{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    @include res('gap', 24px);
+    @include res('width', 1296px);
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-style: solid;
+        border-color: #FAFAFA;
+        background: var(--White, #FFF);
+        @include res('width', 416px);
+        @include res('padding', 16px);
+        @include res('gap', 16px);
+        @include res('border-radius', 16px);
+        @include res('border-width', 1px);
+        .cardHeading{
+            display: flex;
+            align-items: flex-end;
+            align-self: stretch;
+            justify-content: space-between;
+            @include res('gap', 24px);
+            .descr{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                flex: 1 0 0;
+                @include res('gap', 4px);
+                .type{
+                    color: var(--Black-Green, #142B02);
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+                .name{
+                    color: var(--Black-Green, #142B02);
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+            .logo{
+                display: flex;
+                align-items: center;
+                @include res('height', 24px);
+                @include res('gap', 6px);
+                .logoSrc{
+                    @include res('width', 24px);
+                    @include res('height', 24px);
+                }
+                .logoName{
+                    color: var(--Black-Green, #142B02);
+                    font-weight: 700;
+                    @include res('font-size', 12px);
+                }
+            }
+        }
+        .line{
+            @include res('width', 384px);
+            @include res('height', 1px);
+            background: #FAFAFA;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            .ctrName{
+                color: var(--Black-Green, #142B02);
+                font-weight: 500;
+                @include res('font-size', 12px);
+            }
+            .delivery{
+                color: var(--Black-Green, #142B02);
+                font-weight: 600;
+                @include res('font-size', 16px);
+            }
+            .fileSvg{
+                @include res('width', 24px);
+                @include res('height', 24px);
+            }
+            .tonPrice{
+                display: flex;
+                align-items: center;
+                align-self: stretch;
+                @include res('gap', 4px);
+                .mainPrice{
+                    color: var(--Black-Green, #142B02);
+                    font-weight: 600;
+                    @include res('font-size', 16px);
+                }
+                .discPrice{
+                    color: var(--Green-600, #439F00);
+                    font-weight: 500;
+                    @include res('font-size', 12px);
+                }
+                .updPrice{
+                    color: #C30300;
+                    opacity: 0.5;
+                    font-weight: 500;
+                    @include res('font-size', 12px);
+                }
+            }
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            .mainPrice{
+                color: var(--Black-Green, #142B02);
+                font-weight: 600;
+                @include res('font-size', 16px);
+            }
+            .button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: var(--Green-400, #8DF04A);
+                font-weight: 500;
+                color: var(--Black-Green, #142B02);
+                @include res('border-radius', 32px);
+                @include res('width', 103px);
+                @include res('padding-top', 6px);
+                @include res('padding-bottom', 6px);
+                @include res('padding-right', 12px);
+                @include res('padding-left', 8px);
+                @include res('gap', 4px);
+                @include res('font-size', 12px);
+                .btnSgv{
+                    @include res('width', 20px);
+                    @include res('height', 20px);
+                }
+            }
+        }
+    }
+}
