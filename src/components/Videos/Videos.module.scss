@@ -27,6 +27,7 @@
     padding-top: 0;
     color: #FFF;
     background: var(--Black-Green, #142B02);
+    // @include res('margin-left', 24px);
     @include res("border-radius", 100px);
     @include res("font-size", 32px);
     @include res("height", 144px);

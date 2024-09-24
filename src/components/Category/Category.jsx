@@ -7,10 +7,10 @@ import Link from 'next/link'
 const CategoryCard = ({href, name, imgSrc, cardClass, large}) => {
     return (
         <Link href={href} className={`${styles.category__card} ${cardClass} ${large && styles.large}`}>
-                <div className={styles.card__name}>
-                    {name}
-                </div>
-                <img className={styles.card__img} src={imgSrc} alt="image" />
+            <div className={styles.card__name}>
+                {name}
+            </div>
+            <img className={styles.card__img} src={imgSrc} alt="image" />
         </Link>
     )
 }

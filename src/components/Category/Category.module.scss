@@ -21,6 +21,12 @@
         @include resm("gap", 24px);
         @include resm("margin-top", 36px);
     }
+
+    @include media(400){
+      @include resa('width', 296px);
+      @include resa("gap", 12px);
+      @include resa("margin-top", 32px);
+    }
     .category__card{
         display: flex;
         flex-direction: column;
@@ -42,17 +48,40 @@
             @include rest("gap", 10px);
         }
         @include media(768){
-            @include resm("border-radius", 24px);
             @include resm("width", 216px);
+            @include resm("border-radius", 12px);
             @include resm("height", 132px);
-            @include resm("padding", 16px);
+            @include resm("padding", 12px);
             @include resm("gap", 10px);
+        }
+        @include media(400){
+            @include resa('width', 142px);
+            @include resa("border-radius", 12px);
+            @include resa("height", 106px);
+            @include resa("padding", 12px);
+            @include resa("gap", 10px);
+        }
+        &:nth-child(4){
+            @include media(768){
+                @include resm('width', 154px);
+    
+            }
+            @include media(400){
+                @include resa('width', 142px);
+            }
         }
         &.large{
             @include res("width", 416px);
             @include media(1024){
                 @include rest("width", 296px);
             }
+            @include media(768){
+                @include resm('width', 154px);
+            }
+            @include media(400){
+                @include resa('width', 142px);
+            }
+
         }
         &.yellow{   
             background: var(--Yellow-300, #FFF26D);
@@ -78,6 +107,13 @@
             @include media(1024){
                 @include rest("font-size", 20px);
             }
+            @include media(768){
+                @include resm("font-size", 16px);
+            }
+            @include media(400){
+                @include resa("font-size", 14px);
+            }
+            
         }
         .card__img{
             position: absolute;
@@ -91,6 +127,19 @@
                 @include rest("width", 148px);
                 @include rest("height", 137px);
             }
+            @include media(768){
+                @include resm("right", -20px);
+                @include resm("bottom", -13px);
+                @include resm("width", 110px);
+                @include resm("height", 101px);
+            }
+            @include media(400){
+                @include resa("right", -15px);
+                @include resa("bottom", -20px);
+                @include resa("width", 88px);
+                @include resa("height", 81px);
+            }
+
         }
     }
 }

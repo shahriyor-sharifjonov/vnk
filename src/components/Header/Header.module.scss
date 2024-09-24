@@ -1,18 +1,36 @@
+// 1440px responsive
+// 1024px responsive
+// 768px responsive
+// 400 responsive
+
+
 @import "@/styles/mixins.scss";
 .header {
-    @include res('width', 1296px);
-    @include res('padding-top', 12px);
-    @include res('padding-bottom', 12px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include res('width', 1296px);
+    @include res('padding-top', 12px);
+    @include res('padding-bottom', 12px);
     @include res('gap', 12px);
+    @include media(1024){
+        @include rest('width', 936px);
+    }
+    @include media(768){
+        @include resm('width', 696px);
+    }
+    @include media(400){
+      @include resa('width', 296px);
+    }
     .header__topContainer{
         display: flex;
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
+        @include media(768){
+          display: none;
+        }
         .header__topContainer__locationBar{
             display: flex;
             align-items: center;
@@ -27,13 +45,20 @@
                 @include res('gap', 4px);
                 @include res('width', 132px);
                 @include res('height', 24px);
+                @include media(1024){
+                    
+                    @include rest('width', 91px);
+                    @include rest('height', 18px);
+                    
+                }
                 span{
                     color: var(--Gray-500, #868686);
-                    @include res('font-size', 16px);
                     font-style: normal;
                     font-weight: 600;
-                    @include res('line-height', 24px);
-                    // letter-spacing: 0.48px;
+                   @include res('font-size', 16px);
+                    @include media(1024){
+                        @include rest('font-size', 14px);
+                    }
                 }
                 svg{
                     @include res('width', 16px);
@@ -47,22 +72,36 @@
             @include res('gap', 12px);
             @include res('width', 644px);
             @include res('height', 32px);
+            @include media(1024){
+                @include rest('width', 557px);
+                @include rest('height', 26px);
+                
+            }
             .navBar__link{
                 font-family: Manrope;
-                @include res('font-size', 16px);
-                @include res('font-height', 24px);
-                text-decoration: none;
                 font-style: normal;
                 font-weight: 600;
                 color: var(--Gray-500, #868686);
+                text-decoration: none;
+                @include res('font-size', 16px);
+                @include media(1024){
+                    @include rest('font-size', 14px);
+                  
+                }
                 &.navBar__greenBtn{
+                    background: var(--Green-400, #8DF04A);
+                    color: var(--Black-Green, #142B02);
                     @include res('padding-top', 4px);
                     @include res('padding-bottom', 4px);
                     @include res('padding-right', 12px);
                     @include res('padding-left', 12px);
                     @include res('border-radius', 8px);
-                    background: var(--Green-400, #8DF04A);
-                    color: var(--Black-Green, #142B02);
+                    @include media(1024){
+                        @include rest('padding-right', 8px);
+                        @include rest('padding-left', 8px);
+                        @include rest('border-radius', 4px);
+                        
+                    }   
                 }
             }
         }
@@ -71,21 +110,50 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include res('gap', 32px);
         align-self: stretch;
+        @include res('gap', 32px);
+        @include media(1024){
+          @include rest('gap', 12px);
+          justify-content: space-between;
+        }
+        @include media(768){
+            @include resm('width', 696px);
+        }
+        @include media(400){
+            flex-direction: column;
+            @include resa('width', 296px);
+            @include resa('gap', 4px);
+        }
         .header__bottomContainer__logoCtr{
             display: flex;
             align-items: flex-start;
             @include res('gap', 24px);
+            @include media(1024){
+              @include rest('gap', 8px);
+            }
+            @include media(768){
+              flex-direction: row-reverse;
+            }
+            @include media(400){
+                justify-content: space-between;
+                align-items: center;
+                @include resa('width', 296px);
+            }
             img{
                 @include res('width', 173px);
                 @include res('height', 49px);
+                @include media(768){
+                    @include resm('width', 114px);
+                    @include resm('height', 32px);
+                }
+                @include media(400){
+                  @include resa('width', 57px);
+                  @include resa('height', 16px);
+                }
             }
             .logoCtr__catalogBtn{
                 display: flex;
                 align-items: center;
-                color: var(--Black-Green, #142B02);
-                font-weight: 600;
                 text-decoration: none;
                 background: var(--Green-400, #8DF04A);  
                 @include res('padding-top', 14px);
@@ -95,14 +163,57 @@
                 @include res('border-radius', 8px);
                 @include res('gap', 12px);  
                 @include res('font-size', 16px);
-                svg{
+                @include media(1024){
+                    @include rest('padding', 8px);
+                }
+                svg.notActive{
                     @include res('width', 24px);
                     @include res('height', 24px);
+                    @include media(400){
+                      @include resa('width', 16px);
+                      @include resa('height', 16px);
+                    }
+                }
+                svg.active{
+                    display: none;
+                    @include res('width', 24px);
+                    @include res('height', 24px);
+                    @include media(400){
+                      @include resa('width', 16px);
+                      @include resa('height', 16px);
+                    }
+                }
+                span{
+                    color: var(--Black-Green, #142B02);
+                    font-weight: 600;
+                    @include media(768){
+                      display: none;
+                    }
+                }
+            }
+            .logoCtr__link{
+                display: none;
+                @include media(400){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: var(--Green-700, #266D00);
+                    text-decoration: none;
+                    font-weight: 600;
+                    @include resa('font-size', 12px);
+                    @include resa('padding', 5px);
+                    svg{
+                        @include resa('width', 16px);
+                        @include resa('height', 16px);
+                    }
                 }
             }
         }
 
         .header__bottomContainer__searchWrp {
+            border-color: #DFF9CA;
+            border-style: solid;
+            background: #FFF;
             @include res('width', 570px);
             @include res('padding-top', 4px);
             @include res('padding-bottom', 4px);
@@ -110,38 +221,60 @@
             @include res('padding-left', 16px);
             @include res('border-radius', 32px);
             @include res('border-width', 2px);
-            border-color: #DFF9CA;
-            border-style: solid;
-            background: #FFF;
+            @include media(1024){
+              @include rest('width', 343px);
+            }
+            @include media(768){
+                @include resm('width', 420px);
+              
+            }
+            @include media(400){
+              @include resa('width', 296px);
+              @include resa('padding-top', 4px);
+              @include resa('padding-bottom', 4px);
+              @include resa('padding-right', 4px);
+              @include resa('padding-left', 16px);
+            }
             .searchWrp__searchCtr{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 input.searchCtr__searchInput{
-                    @include res('width', 392px);
                     font-weight: 500;
                     background-color: transparent;
                     outline: none;
                     border: none;
                     color: black;
+                    width: max-content;
                     @include res('font-size', 16px);
                     &::placeholder{
                         color: #B0B0B0;
                         @include res('font-size', 16px);
+                        @include media(400){
+                            @include resa('font-size', 10px);
+                        }
+                    }
+                    @include media(400){
+                        @include resa('font-size', 10px);
                     }
                 }
                 .searchCtr__searchBtn{
-                    @include res('border-radius', 32px);
-                    @include res('padding', 10px);
                     display: flex;
                     // padding: 10px;
                     justify-content: center;
-                    @include res('gap', 4px);
                     align-items: center;
                     background: #9AE169;
+                    @include res('gap', 4px);
+                    @include res('border-radius', 32px);
+                    @include res('padding', 10px);
+                    @include res('padding', 6px);
                     svg{
                         @include res('width', 20px);
                         @include res('height', 20px);
+                        @include media(400){
+                          @include resa('width', 12px);
+                          @include resa('height', 12px);
+                        }
                     }
                 }
             }
@@ -152,19 +285,45 @@
             justify-content: center;
             align-items: center;
             @include res('gap', 24px);
+            @include media(1024){
+              @include rest('gap', 0px);
+            }
+            @include media(400){
+              display: none;
+            }
             .linksCtr__link{
                 display: flex;
-                @include res('padding', 12px);
-                @include res('border-radius', 8px);
                 flex-direction: column;
                 align-items: center;
                 color: var(--Green-700, #266D00);
                 text-decoration: none;
-                @include res('font-size', 16px);
                 font-weight: 600;
+                @include res('font-size', 16px);
+                @include res('padding', 12px);
+                @include media(1024){
+                  @include rest('font-size', 14px);
+
+                }
+                &:first-child{
+                    @include media(768){
+                      display: none;
+                    }
+                }
+                &:last-child{
+                    @include media(768){
+                      display: none;
+                    }
+                }
                 svg{
                     @include res('width', 34px);
                     @include res('height', 24px);
+                    @include media(1024){
+                      @include rest('width', 24px);
+                    }
+                    @include media(768){
+                      @include resm('width', 20px);
+                      @include resm('height', 20px);
+                    }
                 }
             }
         }
@@ -173,23 +332,66 @@
 
 .topPrices{
     display: flex;
-    @include res("width", 1296px);
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    @include res("width", 1296px);
+    @include media(1024){
+      @include rest('width', 936px);
+    }
+    @include media(768){
+        @include resm('width', 696px);
+    }
+    @include media(400){
+      @include resa('width', 296px);
+    }
     .topPrices__costCtr{
         display: flex;
         align-items: center;
         @include res("gap", 8px);
+        @include media(768){
+            @include resm('gap', 6px);
+        }
+        @include media(400){
+          @include resa('gap', 4px);
+        }
+        @include media(400){
+          
+            &:nth-child(4){
+                display: none;
+            }
+            &:nth-child(5){
+                display: none;
+            }
+        }
+
         .costCtr__name{
-            @include res("font-size", 24px);
             font-weight: 500;
             color: var(--Gray-300, #B0B0B0);
+            @include res("font-size", 24px);
+            @include media(1024){
+              @include rest('font-size', 20px);
+            }
+            @include media(768){
+                @include resm('font-size', 16px);
+            }
+            @include media(400){
+                @include resa('font-size', 12px);
+            }
         }
         .costCtr__cost{
-            @include res("font-size", 24px);
             font-weight: 500;
             color: var(--Black-Green, #142B02);
+            @include res("font-size", 24px);
+            @include media(1024){
+                @include rest('font-size', 20px);
+            }
+            @include media(768){
+                @include resm('font-size', 16px);
+            }
+            @include media(400){
+                @include resa('font-size', 12px);
+            }
         }
 
     }

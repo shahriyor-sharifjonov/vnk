@@ -86,11 +86,68 @@ const Header = () => {
             </div>
             <div className={styles.header__bottomContainer}>
                 <div className={styles.header__bottomContainer__logoCtr}>
+                <Link href='#!' className={styles.logoCtr__link}>
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        >
+                        <mask
+                            id="mask0_4001_5086"
+                            style={{ maskType: "alpha" }}
+                            maskUnits="userSpaceOnUse"
+                            x={0}
+                            y={0}
+                            width={24}
+                            height={24}
+                        >
+                            <rect width={24} height={24} fill="#D9D9D9" />
+                        </mask>
+                        <g mask="url(#mask0_4001_5086)">
+                            <path
+                            d="M12 12C10.9 12 9.95833 11.6083 9.175 10.825C8.39167 10.0417 8 9.1 8 8C8 6.9 8.39167 5.95833 9.175 5.175C9.95833 4.39167 10.9 4 12 4C13.1 4 14.0417 4.39167 14.825 5.175C15.6083 5.95833 16 6.9 16 8C16 9.1 15.6083 10.0417 14.825 10.825C14.0417 11.6083 13.1 12 12 12ZM4 20V17.2C4 16.6333 4.14583 16.1125 4.4375 15.6375C4.72917 15.1625 5.11667 14.8 5.6 14.55C6.63333 14.0333 7.68333 13.6458 8.75 13.3875C9.81667 13.1292 10.9 13 12 13C13.1 13 14.1833 13.1292 15.25 13.3875C16.3167 13.6458 17.3667 14.0333 18.4 14.55C18.8833 14.8 19.2708 15.1625 19.5625 15.6375C19.8542 16.1125 20 16.6333 20 17.2V20H4ZM6 18H18V17.2C18 17.0167 17.9542 16.85 17.8625 16.7C17.7708 16.55 17.65 16.4333 17.5 16.35C16.6 15.9 15.6917 15.5625 14.775 15.3375C13.8583 15.1125 12.9333 15 12 15C11.0667 15 10.1417 15.1125 9.225 15.3375C8.30833 15.5625 7.4 15.9 6.5 16.35C6.35 16.4333 6.22917 16.55 6.1375 16.7C6.04583 16.85 6 17.0167 6 17.2V18ZM12 10C12.55 10 13.0208 9.80417 13.4125 9.4125C13.8042 9.02083 14 8.55 14 8C14 7.45 13.8042 6.97917 13.4125 6.5875C13.0208 6.19583 12.55 6 12 6C11.45 6 10.9792 6.19583 10.5875 6.5875C10.1958 6.97917 10 7.45 10 8C10 8.55 10.1958 9.02083 10.5875 9.4125C10.9792 9.80417 11.45 10 12 10Z"
+                            fill="#266D00"
+                            />
+                        </g>
+                        </svg>
+
+                        Войти
+                    </Link>
                     <Link href='#!' className={styles.logo}>
                         <img src="/Logo.png" alt="" />
                     </Link>
                     <Link href='#!' className={styles.logoCtr__catalogBtn}>
                         <svg
+                            className={styles.active}
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            >
+                            <mask
+                                id="mask0_6004_2068"
+                                style={{ maskType: "alpha" }}
+                                maskUnits="userSpaceOnUse"
+                                x={0}
+                                y={0}
+                                width={24}
+                                height={24}
+                            >
+                                <rect width={24} height={24} fill="#D9D9D9" />
+                            </mask>
+                            <g mask="url(#mask0_6004_2068)">
+                                <path
+                                d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                                fill="#1C1B1F"
+                                />
+                            </g>
+                            </svg>
+
+                        <svg
+                            className={styles.notActive}
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
                             height={24}
@@ -112,12 +169,12 @@ const Header = () => {
                                 <path d="M3 18V16H15V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="#142B02" />
                             </g>
                         </svg>
-                        Каталог
+                        <span>Каталог</span>
                     </Link>
                 </div>
                 <div className={styles.header__bottomContainer__searchWrp}>
                     <div className={styles.searchWrp__searchCtr}>
-                        <input type="text" placeholder={'Оптовые поставки нефти продуктов и удобрений'} className={styles.searchCtr__searchInput} />
+                        <input type="text" placeholder={'Найти'} className={styles.searchCtr__searchInput} />
                         <div className={styles.searchCtr__searchBtn}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

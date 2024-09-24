@@ -1,3 +1,5 @@
+// fully responsive
+
 @import "@/styles/mixins.scss";
 .banner{
     background: url('/banner-line.png') center / cover no-repeat, #82C057;
@@ -7,6 +9,9 @@
     position: relative;
     isolation: isolate;
     @include res('height', 64px);
+    @include media(768){
+        display: none;
+    }
 }
 .img1{
     position: absolute;
@@ -56,6 +61,7 @@
     @include res('padding-right', 6px);
     @include res('border-radius', 12px);
     @include res('font-size', 10px);
+
 }
 .title{
     @include res('font-size', 20px);
