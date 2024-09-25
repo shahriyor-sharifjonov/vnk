@@ -1,4 +1,7 @@
+// fully responsive
 @import "@/styles/mixins.scss";
+
+
 
 .heading{
     color: var(--Black-Green, #142B02);
@@ -8,6 +11,21 @@
     @include res("font-size", 36px);
     @include res("width", 1296px);
     @include res("margin-top", 96px);
+    @include media(1024){
+        @include rest("font-size", 32px);
+        @include rest("width", 936px);
+        @include rest("margin-top", 72px);
+    }
+    @include media(768){
+        @include resm("font-size", 24px);
+        @include resm("width", 708px);
+        @include resm("margin-top", 64px);
+    }
+    @include media(400){
+        @include resa("font-size", 20px);
+        @include resa("width", 296px);
+        @include resa("margin-top", 56px);
+    }
 }
 .recomendsCtr{
     margin-left: auto;
@@ -16,7 +34,22 @@
     @include res("gap", 24px);
     @include res("width", 1296px);
     @include res("margin-top", 64px);
-    
+    @include media(1024){
+        @include rest("gap", 24px);
+        @include rest("width", 936px);
+        @include rest("margin-top", 48px);
+    }
+    @include media(768){
+        flex-direction: column;
+        @include resm("gap", 24px);
+        @include resm("width", 708px);
+        @include resm("margin-top", 32px);
+    }
+    @include media(400){
+        @include resa("gap", 0px);
+        @include resa("width", 296px);
+        @include resa("margin-top", 24px);
+    }
 }
 
 .recomendsCards {
@@ -28,6 +61,21 @@
     @include res("width", 980px);
     @include res("column-gap", 12px);
     @include res("row-gap", 24px);
+    @include media(1024){
+        @include rest("width", 612px);
+        @include rest("column-gap", 12px);
+        @include rest("row-gap", 24px);
+    }
+    @include media(768){
+        @include resm("width", 708px);
+        @include resm("column-gap", 12px);
+        @include resm("row-gap", 24px);
+    }
+    @include media(400){
+        @include resa("width", 296px);
+        @include resa("column-gap", 12px);
+        @include resa("row-gap", 12px);
+    }
 }
 
 .productCard{
@@ -43,6 +91,25 @@
     @include res("border-width", 1px);
     @include res("width", 236px);
     @include res("gap", 10px);
+    @include media(1024){
+        @include rest("border-radius", 16px);
+        @include rest("border-width", 1px);
+        @include rest("width", 196px);
+        @include rest("gap", 10px);
+    }
+    @include media(768){
+        @include resm("border-radius", 8px);
+        @include resm("border-width", 1px);
+        @include resm("width", 165px);
+        @include resm("gap", 8px);
+    }
+    @include media(400){
+        @include resa("border-radius", 8px);
+        @include resa("border-width", 1px);
+        @include resa("width", 142px);
+        @include resa("gap", 8px);
+      
+    }
 }
 
 .cardImgCtr {
@@ -50,12 +117,33 @@
     background-color: #F5F7FD;
     @include res("height", 236px);   
     @include res("width", 236px);
+    @include media(1024){
+        @include rest("height", 196px);   
+        @include rest("width", 196px);
+    }
+    @include media(768){
+        @include resm("height", 165px);   
+        @include resm("width", 165px);
+    }
+    @include media(400){
+        @include resa("height", 142px);   
+        @include resa("width", 142px);
+    }
 }
 
 .cardImg{
     width: max-content;
     height: max-content;
     @include res("width", 236px);
+    @include media(1024){
+        @include rest("width", 196px);
+    }
+    @include media(768){ 
+        @include resm("width", 165px); 
+    }
+    @include media(400){  
+        @include resa("width", 142px);
+    }
 }
 
 .tags{
@@ -65,6 +153,21 @@
     @include res("gap", 6px);
     @include res("bottom", 8px);
     @include res("left", 8px);
+    @include media(1024){
+        @include rest("gap", 4px);
+        @include rest("bottom", 8px);
+        @include rest("left", 4px);
+    }
+    @include media(768){
+        @include resm("gap", 4px);
+        @include resm("bottom", 4px);
+        @include resm("left", 4px);
+    }
+    @include media(400){
+        @include resa("gap", 2px);
+        @include resa("bottom", 4px);
+        @include resa("left", 4px);
+    }
     .green,
     .red,
     .secondGreen,
@@ -82,6 +185,33 @@
         @include res("padding-bottom", 4px);
         @include res("font-size", 12px);   
         @include res("border-radius", 49px);
+        @include media(1024){
+            @include rest("gap", 10px);
+            @include rest("padding-top", 2px);
+            @include rest("padding-right", 6px);
+            @include rest("padding-left", 6px);
+            @include rest("padding-bottom", 4px);
+            @include rest("font-size", 12px);   
+            @include rest("border-radius", 49px);
+        }
+        @include media(768){
+            @include resm("gap", 10px);
+            @include resm("padding-top", 2px);
+            @include resm("padding-right", 6px);
+            @include resm("padding-left", 6px);
+            @include resm("padding-bottom", 2px);
+            @include resm("font-size", 10px);   
+            @include resm("border-radius", 49px);
+        }
+        @include media(400){
+            @include resa("gap", 10px);
+            @include resa("padding-top", 0px);
+            @include resa("padding-right", 4px);
+            @include resa("padding-left", 4px);
+            @include resa("padding-bottom", 0px);
+            @include resa("font-size", 8px);   
+            @include resa("border-radius", 49px);
+        }
     }
     .red{
         background: #F22;
@@ -111,6 +241,26 @@
     @include res("padding-bottom", 6px);
     @include res("padding-left", 10px);
     @include res("padding-right", 10px);
+    @include media(1024){
+        @include rest("padding-top", 6px);
+        @include rest("padding-bottom", 6px);
+        @include rest("padding-left", 8px);
+        @include rest("padding-right", 8px);
+    }
+    @include media(768){
+        @include resm("padding-top", 4px);
+        @include resm("padding-bottom", 4px);
+        @include resm("padding-left", 6px);
+        @include resm("padding-right", 6px);
+    }
+    @include media(400){
+        @include resa("padding-top", 4px);
+        @include resa("padding-bottom", 4px);
+        @include resa("padding-left", 6px);
+        @include resa("padding-right", 6px);
+    }
+
+
     .cardDescr{
         display: flex;
         justify-content: space-between;
@@ -126,32 +276,120 @@
             @include res("line-height", 18px);
             @include res("width", 186px);
             @include res("gap", 4px);
+            @include media(1024){
+                @include rest("font-size", 14px);
+                @include rest("line-height", 18px);
+                @include rest("width", 136px);
+                @include rest("gap", 4px); 
+            }
+            @include media(768){
+                @include resm("font-size", 12px);
+                @include resm("line-height", 18px);
+                @include resm("width", 125px);
+                @include resm("gap", 4px); 
+            }
+            @include media(400){
+                @include resa("font-size", 12px);
+                @include resa("line-height", 18px);
+                @include resa("width", 106px);
+                @include resa("gap", 4px); 
+            }
+
         }
         .like{
-            @include res("width", 20px);
-            @include res("height", 20px);
             display: flex;
             align-items: center;
             justify-content: center;
+            @include res("width", 20px);
+            @include res("height", 20px);
+            @include media(1024){
+                @include rest("width", 20px);
+                @include rest("height", 20px);
+            }
+            @include media(768){
+                @include resm("width", 16px);
+                @include resm("height", 16px);
+            }
+
+            @include media(400){
+                @include resa("width", 12px);
+                @include resa("height", 12px);
+            }
+            
             .likeSvg{
                 @include res("width", 20px);
                 @include res("height", 20px);
+                @include media(1024){
+                    @include rest("width", 20px);
+                    @include rest("height", 20px);
+                }
+                @include media(768){
+                    @include resm("width", 16px);
+                    @include resm("height", 16px);
+                }
+                @include media(400){
+                    @include resa("width", 12px);
+                    @include resa("height", 12px);
+                }
             }
         }
     }
     .price{
+        font-weight: 700;
         @include res("font-size", 14px);
         @include res("margin-top", 8px);
+        @include media(1024){
+            @include rest("font-size", 14px);
+            @include rest("margin-top", 8px);
+        }
+        @include media(768){
+            @include resm("font-size", 12px);
+            @include resm("margin-top", 4px);
+        }
+        @include media(400){
+            @include resa("font-size", 12px);
+            @include resa("margin-top", 4px);
+        }
     }
     .address{
         color: var(--Gray-300, #B0B0B0);
         @include res("font-size", 12px);
         @include res("margin-top", 12px);
+
+        @include media(1024){
+            @include rest("font-size", 12px);
+            @include rest("margin-top", 12px);
+        }
+        @include media(768){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            @include resm('height', 24px);
+            @include resm("font-size", 10px);
+            @include resm("margin-top", 8px);
+        }
+        @include media(400){
+            @include resa('height', 24px);
+            @include resa("font-size", 10px);
+            @include resa("margin-top", 8px);
+        }
     }
     .date{
         color: var(--Gray-300, #B0B0B0);
         @include res("font-size", 12px);
         @include res("margin-top", 4px);
+        @include media(1024){
+            @include rest("font-size", 12px);
+            @include rest("margin-top", 4px);
+        }
+        @include media(768){
+            @include resm("font-size", 10px);
+            @include resm("margin-top", 4px);
+        }
+        @include media(400){
+            @include resa("font-size", 10px);
+            @include resa("margin-top", 4px);
+        }
     }
 }
 
@@ -170,4 +408,23 @@
     @include res("padding", 12px);
     @include res("gap", 24px);
     @include res("border-radius", 20px);
+    @include media(1024){
+        @include rest("font-size", 32px);
+        @include rest("width", 292px);
+        @include rest("height", 984px);
+        @include rest("padding", 12px);
+        @include rest("gap", 24px);
+        @include rest("border-radius", 20px);
+    }
+    @include media(768){
+        @include resm("font-size", 32px);
+        @include resm("width", 696px);
+        @include resm("height", 216px);
+        @include resm("padding", 12px);
+        @include resm("gap", 24px);
+        @include resm("border-radius", 20px);
+    }
+    @include media(400){
+      display: none;
+    }
 }

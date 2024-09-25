@@ -1,3 +1,4 @@
+// fully responsive
 @import "@/styles/mixins.scss";
 
 
@@ -11,6 +12,24 @@
     @include res("width", 1296px);
     @include res("height", 246px);
     @include res("border-radius", 24px);
+    @include media(1024){
+        @include rest("margin-top", 72px);
+        @include rest("width", 948px);
+        @include rest("height", 180px);
+        @include rest("border-radius", 20px);
+    }
+    @include media(768){
+        @include resm("margin-top", 64px);
+        @include resm("width", 708px);
+        @include resm("height", 180px);
+        @include resm("border-radius", 20px);
+    }
+    @include media(400){
+        @include resa("margin-top", 50px);
+        @include resa("width", 296px);
+        @include resa("height", 132px);
+        @include resa("border-radius", 14px);
+    }
 }
 
 .slide{
@@ -18,10 +37,25 @@
     align-items: center;
     justify-content: center;
     line-height: 0;
+    font-weight: 700;
     @include res("width", 1296px);
     @include res("height", 246px);
     @include res("font-size", 36px);
-    font-weight: 700;
+    @include media(1024){
+        @include rest("width", 948px);
+        @include rest("height", 180px);
+        @include rest("font-size", 36px);
+    }
+    @include media(768){
+        @include resm("width", 708px);
+        @include resm("height", 180px);
+        @include resm("font-size", 32px);
+    }
+    @include media(400){
+        @include resa("width", 296px);
+        @include resa("height", 132px);
+        @include resa("font-size", 14px);
+    }
 }
 
 .adsBnr{
@@ -37,6 +71,36 @@
     @include res("padding-bottom", 6px);
     @include res("padding-right", 8px);
     @include res("padding-left", 8px);
+    @include media(1024){
+        @include rest("font-size", 8px);
+        @include rest("bottom", 10px);
+        @include rest("right", 11px);
+        @include rest("border-radius", 8px);
+        @include rest("padding-top", 4px);
+        @include rest("padding-bottom", 4px);
+        @include rest("padding-right", 5px);
+        @include rest("padding-left", 5px);
+    }
+    @include media(768){
+        @include resm("font-size", 8px);
+        @include resm("bottom", 12px);
+        @include resm("right", 12px);
+        @include resm("border-radius", 12px);
+        @include resm("padding-top", 6px);
+        @include resm("padding-bottom", 6px);
+        @include resm("padding-right", 6px);
+        @include resm("padding-left", 6px);
+    }
+    @include media(400){
+        @include resa("font-size", 8px);
+        @include resa("bottom", 8px);
+        @include resa("right", 8px);
+        @include resa("border-radius", 12px);
+        @include resa("padding-top", 2px);
+        @include resa("padding-bottom", 2px);
+        @include resa("padding-right", 6px);
+        @include resa("padding-left", 6px);
+    }
 }
 
 .paginationCustom {
@@ -47,6 +111,22 @@
     align-items: center;
     justify-content: center;
     @include res("gap", 18px);
+    @include media(1024){
+        @include rest("gap", 13px);
+    }
+    @include media(768){
+        @include resm("gap", 13px);
+    }
+    @include media(400){
+        @include resa("gap", 8px);
+        span{
+            @include resa('width', 4px, true);
+            @include resa('height', 4px, true);
+        }
+    }
+    span{
+        opacity: 1 !important;
+    }
 }
 
 .secondBanner{
@@ -56,6 +136,7 @@
     align-items: center;
     background: var(--Green-900, #154300);  
     font-weight: 700;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -65,4 +146,27 @@
     @include res("width", 1296px);
     @include res("height", 480px);
     @include res("border-radius", 24px);
+    @include media(1024){
+        @include rest("margin-top", 72px);
+        @include rest("font-size", 36px);
+        @include rest("width", 936px);
+        @include rest("height", 332px);
+        @include rest("border-radius", 24px);
+    }
+    @include media(768){
+        @include resm("margin-top", 64px);
+        @include resm("font-size", 32px);
+        @include resm("width", 696px);
+        @include resm("height", 264px);
+        @include resm("border-radius", 24px);
+        
+    }
+    @include media(400){
+        @include resa("margin-top", 56px);
+        @include resa("font-size", 14px);
+        @include resa("width", 296px);
+        @include resa("height", 186px);
+        @include resa("border-radius", 12px);
+        
+    }
 }

@@ -6,6 +6,9 @@ export default function SecondBanner() {
   return (
     <div className={styles.secondBanner}>
         Место для вашей рекламы
+        <div className={styles.adsBnr}>
+            Реклама
+        </div>
     </div>
   )
 }

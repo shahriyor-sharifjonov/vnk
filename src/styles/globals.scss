@@ -69,7 +69,21 @@ body{
 .swiper{
   overflow: visible !important;
 }
+
 .swiper-slide{
+  width: fit-content !important;
+}
+
+.swiper-wrapper{
   // width: fit-content !important;
-  @include res('margin-right', 24px);
+  @include res('gap', 24px);
+  @include media(1024){
+    @include rest('gap', 24px);
+  }
+  // @include media(768){
+  //   @include resm('gap', 16px);
+  // }
+  @include media(400){
+    @include resa('gap', 12px)
+  }
 } 

@@ -28,8 +28,8 @@ $baseValueSmall: 320px;
 @mixin resm($property, $value) {
     #{$property}: calc(($value / $baseValueMedium) * 100vw);
 }
-@mixin resa($property, $value) {
-  #{$property}: calc(($value / $baseValueSmall) * 100vw);
+@mixin resa($property, $value, $important: false) {
+  #{$property}: calc(($value / $baseValueSmall) * 100vw) #{if($important, '!important', '')};
 }
 
 @mixin media($size) {

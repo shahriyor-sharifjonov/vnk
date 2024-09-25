@@ -42,4 +42,22 @@
     @include res('width', 1296px);
     @include res('column-gap', 24px);
     @include res('row-gap', 32px);
+    @include media(1024){
+        @include rest('margin-top', 48px);
+        @include rest("width", 612px);
+        @include rest("column-gap", 12px);
+        @include rest("row-gap", 24px);
+    }
+    @include media(768){
+        @include resm('margin-top', 32px);
+        @include resm("width", 708px);
+        @include resm("column-gap", 12px);
+        @include resm("row-gap", 24px);
+    }
+    @include media(400){
+        @include resa('margin-top', 24px);
+        @include resa("width", 296px);
+        @include resa("column-gap", 12px);
+        @include resa("row-gap", 12px);
+    }
 }

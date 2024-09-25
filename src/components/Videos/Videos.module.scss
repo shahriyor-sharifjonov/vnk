@@ -1,3 +1,4 @@
+// fully responsive
 @import "@/styles/mixins.scss";
 
 .videosCtr{
@@ -7,17 +8,27 @@
     @include res("padding-top", 64px);
     @include res("padding-bottom", 64px);
     @include res("width", 1296px);
-    @include res("gap", 24px);
-}
-
-.videosWrapper{
-    overflow-x: scroll;
-    display: flex;
-    @include res("gap", 24px);
-    &::-webkit-scrollbar{
-        display: none;
+    @include media(1024){
+        @include rest("margin-top", 83px);
+        @include rest("padding-top", 48px);
+        @include rest("padding-bottom", 48px);
+        @include rest("width", 948px);
+    }
+    @include media(768){
+        @include resm("margin-top", 64px);
+        @include resm("padding-top", 24px );
+        @include resm("padding-bottom", 24px );
+        @include resm("width", 708px);
+    }
+    @include media(400){
+        @include resa("margin-top", 56px);
+        @include resa("padding-top", 12px);
+        @include resa("padding-bottom", 12px);
+        @include resa("width", 296px);
     }
 }
+
+
 .videoCard{
     display: flex;
     justify-content: center;
@@ -27,11 +38,34 @@
     padding-top: 0;
     color: #FFF;
     background: var(--Black-Green, #142B02);
-    // @include res('margin-left', 24px);
     @include res("border-radius", 100px);
     @include res("font-size", 32px);
     @include res("height", 144px);
     @include res("width", 144px);
     @include res("padding-left", 23px);
     @include res("padding-right", 23px);
+    @include media(1024){
+        @include rest("border-radius", 100px);
+        @include rest("font-size", 32px);
+        @include rest("height", 126px);
+        @include rest("width", 126px);
+        @include rest("padding-left", 14px);
+        @include rest("padding-right", 14px);
+    }
+    @include media(768){
+        @include resm("border-radius", 100px);
+        @include resm("font-size", 24px);
+        @include resm("height", 96px);
+        @include resm("width", 96px);
+        @include resm("padding-left", 10px);
+        @include resm("padding-right", 10px);
+    }
+    @include media(400){
+        @include resa("border-radius", 100px);
+        @include resa("font-size", 14px);
+        @include resa("height", 80px);
+        @include resa("width", 80px);
+        @include resa("padding-left", 17px);
+        @include resa("padding-right", 17px);
+    }
 }
