@@ -19,6 +19,13 @@ body{
   overflow-x: hidden;
 }
 
+body.activeBar{
+  overflow-y: hidden;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
 .wrapper{
   min-height: 100%;
   display: flex;

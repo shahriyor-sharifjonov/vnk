@@ -27,6 +27,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 200;
         align-self: stretch;
         @include media(768){
           display: none;
@@ -110,6 +111,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 200;
         align-self: stretch;
         @include res('gap', 32px);
         @include media(1024){
@@ -166,16 +168,7 @@
                 @include media(1024){
                     @include rest('padding', 8px);
                 }
-                svg.notActive{
-                    @include res('width', 24px);
-                    @include res('height', 24px);
-                    @include media(400){
-                      @include resa('width', 16px);
-                      @include resa('height', 16px);
-                    }
-                }
-                svg.active{
-                    display: none;
+                svg{
                     @include res('width', 24px);
                     @include res('height', 24px);
                     @include media(400){
@@ -226,7 +219,6 @@
             }
             @include media(768){
                 @include resm('width', 420px);
-              
             }
             @include media(400){
               @include resa('width', 296px);
@@ -234,6 +226,7 @@
               @include resa('padding-bottom', 4px);
               @include resa('padding-right', 4px);
               @include resa('padding-left', 16px);
+              @include resa('border-radius', 32px);
             }
             .searchWrp__searchCtr{
                 display: flex;
@@ -402,4 +395,15 @@
     align-items: center;
     justify-content: center;
     line-height: 0;
+}
+
+.navBar{
+    z-index: 100;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    // @include res("top", 205px);
 }

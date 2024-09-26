@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 200;
     isolation: isolate;
     @include res('height', 64px);
     @include media(768){

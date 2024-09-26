@@ -1,7 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 
 import styles from './Header.module.scss'
 import Link from 'next/link'
+
+const NavBar = () => {
+    return (
+        <div className={styles.navBar}>
+            
+        </div>
+    )
+}
 
 const Cost = ({name, price}) => {
     return (
@@ -17,9 +26,19 @@ const Cost = ({name, price}) => {
 }
 
 const Header = () => {
+    const [openNavBar, setOpenNavBar] = useState(false);
+
+    useEffect(()=>{
+        const body = document.querySelector('body')
+        if(openNavBar){
+            body.classList.add('activeBar')
+        } else{
+            body.classList.remove('activeBar')
+        }
+    },[openNavBar])
     return (
         <>
-        <header className={styles.header}>
+        <header className={`${styles.header} ${openNavBar && 'active'}`}>
             <div className={styles.header__topContainer}>
                 <div className={styles.header__topContainer__locationBar}>
                     <svg
@@ -86,7 +105,7 @@ const Header = () => {
             </div>
             <div className={styles.header__bottomContainer}>
                 <div className={styles.header__bottomContainer__logoCtr}>
-                <Link href='#!' className={styles.logoCtr__link}>
+                    <Link href='#!' className={styles.logoCtr__link}>
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={24}
@@ -118,9 +137,9 @@ const Header = () => {
                     <Link href='#!' className={styles.logo}>
                         <img src="/Logo.png" alt="" />
                     </Link>
-                    <Link href='#!' className={styles.logoCtr__catalogBtn}>
+                    <Link href='#!' className={styles.logoCtr__catalogBtn} onClick={()=>{scrollTo(0, 0); setOpenNavBar(!openNavBar)}}>
+                        {openNavBar && (
                         <svg
-                            className={styles.active}
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
                             height={24}
@@ -144,10 +163,9 @@ const Header = () => {
                                 fill="#1C1B1F"
                                 />
                             </g>
-                            </svg>
-
+                        </svg>)}
+                        {!openNavBar && (
                         <svg
-                            className={styles.notActive}
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
                             height={24}
@@ -168,7 +186,7 @@ const Header = () => {
                             <g mask="url(#mask0_4001_4993)">
                                 <path d="M3 18V16H15V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="#142B02" />
                             </g>
-                        </svg>
+                        </svg>)}
                         <span>Каталог</span>
                     </Link>
                 </div>
@@ -303,6 +321,7 @@ const Header = () => {
            <Cost name={'АИ-95'} price={'56.89₽'} />
             
         </div>
+        {openNavBar && <NavBar />}
         </>
     )
 }

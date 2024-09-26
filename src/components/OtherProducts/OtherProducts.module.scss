@@ -9,12 +9,33 @@
     margin-right: auto;
     @include res('margin-top', 96px);
     @include res('width', 1296px);
+    @include media(1024){
+        @include rest('margin-top', 72px);
+        @include rest('width', 936px)
+    }
+    @include media(768){
+        @include resm('margin-top', 64px);
+        @include resm('width', 696px)
+    }
+    @include media(400){
+        @include resa('margin-top', 64px);
+        @include resa('width', 296px)        
+    }
     .h2{
         color: #183203;
         font-family: Manrope;
         font-style: normal;
         font-weight: 700;
         @include res('font-size', 36px);
+        @include media(1024){
+            @include rest('font-size', 32px);
+        }
+        @include media(768){
+            @include resm('font-size', 24px);
+        }
+        @include media(400){
+            @include resa('font-size', 20px);            
+        }
     }
     .seeAll{
         display: flex;
@@ -23,13 +44,28 @@
         font-weight: 600;
         @include res('font-size', 16px);
         @include res('gap', 4px);
+        @include media(1024){
+            @include rest('font-size', 14px);
+            @include rest('gap', 4px);
+        }
+        @include media(768){
+            @include resm('font-size', 14px);
+            @include resm('gap', 4px);
+        }
+        @include media(400){
+            @include resa('font-size', 12px);
+            @include resa('gap', 4px);
+        }
         .svg{
             @include res('width', 16px);
             @include res('height', 16px);
-
+            @include media(1024){
+                display: none;
+            }
         }
     }
 }
+
 .cards{
     display: flex;
     align-items: center;
@@ -42,11 +78,23 @@
     @include res('width', 1296px);
     @include res('column-gap', 24px);
     @include res('row-gap', 32px);
+    
     @include media(1024){
+        justify-content: space-between;
         @include rest('margin-top', 48px);
-        @include rest("width", 612px);
-        @include rest("column-gap", 12px);
+        @include rest("width", 936px);
         @include rest("row-gap", 24px);
+        & > :last-child{
+            display: none;
+        }
+        
+        & > :nth-child(14){
+            display: none;
+        }
+    
+        & > :nth-child(13){
+            display: none;
+        }
     }
     @include media(768){
         @include resm('margin-top', 32px);
@@ -59,5 +107,22 @@
         @include resa("width", 296px);
         @include resa("column-gap", 12px);
         @include resa("row-gap", 12px);
+        & > :nth-child(12){
+            display: none;
+        }
+    
+        & > :nth-child(11){
+            display: none;
+        }
+
+        & > :nth-child(10){
+            display: none;
+        }
+    
+        & > :nth-child(9){
+            display: none;
+        }
     }
+
+
 }
