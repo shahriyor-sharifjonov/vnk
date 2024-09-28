@@ -137,8 +137,7 @@ const Header = () => {
                     <Link href='#!' className={styles.logo}>
                         <img src="/Logo.png" alt="" />
                     </Link>
-                    <Link href='#!' className={styles.logoCtr__catalogBtn} onClick={()=>{scrollTo(0, 0); setOpenNavBar(!openNavBar)}}>
-                        {openNavBar && (
+                    <Link href='#!' className={styles.logoCtr__catalogBtn} onClick={()=>{scrollTo(0, 0); setOpenNavBar(!openNavBar)}}> {openNavBar && (
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={24}
