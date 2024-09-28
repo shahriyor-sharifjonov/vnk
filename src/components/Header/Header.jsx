@@ -12,18 +12,7 @@ const NavBar = () => {
     )
 }
 
-const Cost = ({name, price}) => {
-    return (
-        <div className={styles.topPrices__costCtr}>
-            <div className={styles.costCtr__name}>
-                {name}
-            </div>
-            <div className={styles.costCtr__cost}>
-                {price}
-            </div>
-        </div>
-    )
-}
+
 
 const Header = () => {
     const [openNavBar, setOpenNavBar] = useState(false);
@@ -42,11 +31,11 @@ const Header = () => {
             <div className={styles.header__topContainer}>
                 <div className={styles.header__topContainer__locationBar}>
                     <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width={18}
-                    height={18}
-                    viewBox="0 0 18 18"
-                    fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={18}
+                        height={18}
+                        viewBox="0 0 18 18"
+                        fill="none"
                     >
                     <mask
                         id="mask0_4001_4962"
@@ -97,7 +86,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className={styles.header__topContainer__navBar}>
-                    <Link href="#!" className={styles.navBar__link}>Франшиза</Link>
+                    <Link href="franshiza" className={styles.navBar__link}>Франшиза</Link>
                     <Link href="#!" className={styles.navBar__link}>Инвестиции</Link>
                     <Link href="#!" className={styles.navBar__link}>Мобильное приложение</Link>
                     <Link href="#!" className={`${styles.navBar__link} ${styles.navBar__greenBtn}`}>Разместить объявление</Link>
@@ -134,7 +123,7 @@ const Header = () => {
 
                         Войти
                     </Link>
-                    <Link href='#!' className={styles.logo}>
+                    <Link href='/' className={styles.logo}>
                         <img src="/Logo.png" alt="" />
                     </Link>
                     <Link href='#!' className={styles.logoCtr__catalogBtn} onClick={()=>{scrollTo(0, 0); setOpenNavBar(!openNavBar)}}> {openNavBar && (
@@ -312,14 +301,6 @@ const Header = () => {
                 </div>
             </div>
         </header>
-        <div className={styles.topPrices}>
-           <Cost name={'ДТЛ'} price={'42.54₽'} />
-           <Cost name={'ДТЗ'} price={'64.54₽'} />
-           <Cost name={'ДТМ'} price={'82.54₽'} />
-           <Cost name={'АИ-92'} price={'52.17₽'} />
-           <Cost name={'АИ-95'} price={'56.89₽'} />
-            
-        </div>
         {openNavBar && <NavBar />}
         </>
     )

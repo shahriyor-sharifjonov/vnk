@@ -1,0 +1,99 @@
+@import "@/styles/mixins.scss";
+
+.section2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include res("width", 1296px);
+    @include res("gap", 64px);
+    @include res("margin-top", 152px);
+    @include media(1024){
+        @include rest("width",  936px);
+    }
+    @include media(768) {
+      @include resm("width",  696px);
+    }
+    @include media(575) {
+      @include resa("width",  296px);
+    }
+    .h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--Gray-50, #FAFAFA);    
+        @include res("width", 462px);
+        @include res("height", 160px);
+        @include res("padding", 32px);
+        @include res("gap", 16px);
+        @include res("border-radius", 24px);
+            .desrc{
+                font-weight: 500;
+                @include res("width", 271px);
+                @include res("font-size", 24px);
+            }
+            .num{
+                font-weight: 800;
+                background: linear-gradient(180deg, #183203 0%, #499809 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+
+                @include res("font-size", 96px);
+            }
+    }
+}
+
+
+.button{
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    background: var(--Green-500, #63E80E);
+    width: fit-content;
+    font-weight: 600;
+    @include res("padding-top", 20px);
+    @include res("padding-bottom", 20px);
+    @include res("padding-left", 24px);
+    @include res("padding-right", 24px);
+    @include res("font-size", 24px);
+}
+
+
+.section3{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    @include res("width", 1296px);
+    @include res("gap", 32px);
+    @include res("margin-top", 152px);
+    .imgLaptop img{
+        @include res("width", 666px);
+        @include res("height", 395px);
+    }
+    .laptopInfo{
+        display: flex;
+        flex-direction: column;
+        @include res("gap", 24px);
+        .heading{
+            display: flex;
+            flex-direction: column;
+            @include res("gap", 8px);
+            .headingP{
+                @include res("font-size", 12px);
+            }
+        }
+        .infoP{
+            @include res("font-size", 20px);
+        }
+    }
+}

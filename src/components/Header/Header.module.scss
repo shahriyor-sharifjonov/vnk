@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: white;
     @include res('width', 1296px);
     @include res('padding-top', 12px);
     @include res('padding-bottom', 12px);
@@ -28,6 +29,7 @@
         justify-content: space-between;
         align-items: center;
         z-index: 200;
+        background: white;
         align-self: stretch;
         @include media(768){
           display: none;
@@ -110,6 +112,7 @@
     .header__bottomContainer{
         display: flex;
         justify-content: center;
+        background: white;
         align-items: center;
         z-index: 200;
         align-self: stretch;

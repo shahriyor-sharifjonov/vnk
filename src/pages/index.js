@@ -11,6 +11,7 @@ import Popular from "@/components/Popular/Popular";
 import BestFuel from "@/components/BestFuel/BestFuel";
 import OtherProducts from "@/components/OtherProducts/OtherProducts";
 import Footer from "@/components/Footer/Footer";
+import TopPrices from "@/components/Header/TopPrices";
 
 
 export default function Home() {
@@ -24,10 +25,10 @@ export default function Home() {
       </Head>
       <Banner />
       <Header />
+      <TopPrices />
       <Category />
       <SliderAds />
       <Videos />
-      
       <Recomendation />
       <SecondBanner />
       <Popular /> 

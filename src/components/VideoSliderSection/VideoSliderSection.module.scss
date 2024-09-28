@@ -1,0 +1,109 @@
+@import "@/styles/mixins.scss";
+
+
+
+.section{
+    // @include res("padding-top", 206px);
+    margin-right: auto;
+    margin-left: auto;
+    overflow-y: hidden;
+  
+
+    .imgCtr{ 
+        display: flex;
+        width: 100%;
+        @include res("top", 206px);
+        @include res("height", 206px);
+    }
+    .absoluteImgFirst{
+        position: relative;
+        @include res("width", 629.713px);
+        @include res("height", 352.848px);
+        @include res("top", -120px);
+        @include res("left", -150px);
+    }
+    .absoluteImgFSecond{
+        position: relative;
+        @include res("width", 1482px);
+        @include res("height", 830px);
+        @include res("top", -440px);
+        @include res("right", -250px);
+    }
+    .wrapper{
+        margin-right: auto;
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include res("margin-top", -40px);
+        @include res("padding-bottom", 92px);
+        @include res("width", 1296px);
+        @include media(1024){
+            @include rest("width",  936px);
+        }
+        @include media(768){
+          @include resm("width",  696px);
+        }
+        @include media(575){
+          @include resa("width",  296px);
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            @include res("gap", 48px);
+            @include res("width", 600px);
+            .text{
+                display: flex;
+                flex-direction: column;
+                @include res("gap", 24px);    
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    @include res("gap", 24px);        
+                    li{
+                        display: flex;
+                        align-items: center;
+                        @include res("gap", 12px);
+                        .restangle{
+                            border-radius: 100px;
+                            background: var(--Green-400, #8DF04A);
+                            @include res("width", 12px);
+                            @include res("height", 12px);
+                        }
+                        .ulText{
+                            font-weight: 500;
+                            @include res("font-size", 20px);
+                        }
+                    }
+                }
+            }
+            .button{
+                display: flex;
+                align-items: center;
+                border-radius: 14px;
+                background: var(--Green-500, #63E80E);
+                width: fit-content;
+                font-weight: 600;
+                @include res("padding-top", 20px);
+                @include res("padding-bottom", 20px);
+                @include res("padding-left", 24px);
+                @include res("padding-right", 24px);
+                @include res("font-size", 24px);
+            }
+        }
+    }
+    .videoSlider{
+        overflow: hidden;
+        position: relative;
+        @include res("border-radius", 52px);
+        @include res("width", 634px);
+        
+        .slide{
+            @include res("width", 634px);
+            img{
+                @include res("width", 634px);
+                @include res("height", 354px);
+            }
+        }
+    }
+}

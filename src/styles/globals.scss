@@ -43,6 +43,22 @@ a{
   color: inherit;
 }
 
+main{
+  margin-right: auto;
+  margin-left: auto;
+
+  // @include res("width", 1296px);
+  // @include media(1024){
+  //     @include rest("width",  936px);
+  // }
+  // @include media(768){
+  //   @include resm("width",  696px);
+  // }
+  // @include media(575){
+  //   @include resa("width",  296px);
+  // }
+}
+
 ul {
   list-style-type: none;
 }
@@ -97,3 +113,15 @@ body {
     @include resa('gap', 12px)
   }
 } 
+
+.videoSlider{
+  .swiper-wrapper{
+    gap: 0 !important;
+  }
+}
+
+
+h2{
+  font-weight: 700;
+  @include res("font-size", 36px);
+}
