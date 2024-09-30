@@ -7,8 +7,6 @@
     margin-right: auto;
     margin-left: auto;
     overflow-y: hidden;
-  
-
     .imgCtr{ 
         display: flex;
         width: 100%;
@@ -44,7 +42,7 @@
         @include media(768){
           @include resm("width",  696px);
         }
-        @include media(575){
+        @include media(576){
           @include resa("width",  296px);
         }
         .info{

@@ -17,7 +17,7 @@
         @include resm('margin-top', 64px);
         @include resm('width', 696px)
     }
-    @include media(400){
+    @include media(576){
         @include resa('margin-top', 64px);
         @include resa('width', 296px)        
     }
@@ -33,7 +33,7 @@
         @include media(768){
             @include resm('font-size', 24px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('font-size', 20px);            
         }
     }
@@ -52,7 +52,7 @@
             @include resm('font-size', 14px);
             @include resm('gap', 4px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('font-size', 12px);
             @include resa('gap', 4px);
         }
@@ -102,7 +102,7 @@
         @include resm("column-gap", 12px);
         @include resm("row-gap", 24px);
     }
-    @include media(400){
+    @include media(576){
         @include resa('margin-top', 24px);
         @include resa("width", 296px);
         @include resa("column-gap", 12px);

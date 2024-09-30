@@ -17,7 +17,7 @@
         @include resm('margin-top', 64px);
         @include resm('width', 696px)
     }
-    @include media(400){
+    @include media(576){
         @include resa('margin-top', 64px);
         @include resa('width', 296px)        
     }
@@ -33,7 +33,7 @@
         @include media(768){
             @include resm('font-size', 24px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('font-size', 20px);            
         }
     }
@@ -52,7 +52,7 @@
             @include resm('font-size', 14px);
             @include resm('gap', 4px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('font-size', 12px);
             @include resa('gap', 4px);
         }
@@ -91,7 +91,7 @@
         @include resm('width', 696px);
     }
 
-    @include media(400){
+    @include media(576){
         @include resa('gap', 12px);
         @include resa('margin-top', 12px);
         @include resa('margin-bottom', 12px);
@@ -134,7 +134,7 @@
             @include resm('border-radius', 32px);
         }
 
-        @include media(400){
+        @include media(576){
             @include resa('padding-top', 8px);
             @include resa('padding-bottom', 8px);
             @include resa('padding-left', 12px);
@@ -169,7 +169,7 @@
         @include resm('gap', 24px);
         @include resm('width', 696px);
     }
-    @include media(400){
+    @include media(576){
         @include resa('gap', 24px);
         @include resa('width', 296px);
     }
@@ -200,7 +200,7 @@
             @include resm('border-radius', 16px);
             @include resm('border-width', 1px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('width', 296px);
             @include resa('padding-left', 12px);
             @include resa('padding-right', 12px);
@@ -223,7 +223,7 @@
                 @include resm('gap', 24px);
             }
 
-            @include media(400){
+            @include media(576){
                 @include resa('gap', 24px);
             }
 
@@ -240,7 +240,7 @@
                     @include resm('gap', 4px);
                 }
 
-                @include media(400){
+                @include media(576){
                     @include resa('gap', 4px);
                 }
 
@@ -256,7 +256,7 @@
                         @include resm('font-size', 12px);
                     }
 
-                    @include media(400){
+                    @include media(576){
                         @include resa('font-size', 12px);
                     }
                 }
@@ -270,7 +270,7 @@
                     @include media(768){
                         @include rest('font-size', 14px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('font-size', 14px);
                     }
                 }
@@ -288,7 +288,7 @@
                     @include resm('height', 24px);
                     @include resm('gap', 6px);    
                 }
-                @include media(400){
+                @include media(576){
                     @include resa('height', 24px);
                     @include resa('gap', 4px);    
                 }                
@@ -303,7 +303,7 @@
                         @include resm('width', 16px);    
                         @include resm('height', 16px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('width', 16px);    
                         @include resa('height', 16px);
                     }
@@ -318,7 +318,7 @@
                     @include media(768){
                         @include resm("font-size", 12px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa("font-size", 12px);
                     }
                     
@@ -337,7 +337,7 @@
                 @include resm('width', 304px);
                 @include resm('height', 1px);    
             }
-            @include media(400){
+            @include media(576){
                 @include resa('width', 272px);
                 @include resa('height', 1px);    
             }
@@ -357,7 +357,7 @@
                 @include media(768){    
                     @include resm('font-size', 12px);
                 }
-                @include media(400){    
+                @include media(576){    
                     @include resa('font-size', 12px);
                 }
             }
@@ -371,7 +371,7 @@
                 @include media(768){
                     @include resm('font-size', 14px);
                 }
-                @include media(400){
+                @include media(576){
                     @include resa('font-size', 14px);
                 }
             }
@@ -388,7 +388,7 @@
                         @include resm('width', 24px);
                         @include resm('height', 24px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('width', 20px);
                         @include resa('height', 20px);
                     }
@@ -405,7 +405,7 @@
                 @include media(768){
                     @include resm('gap', 4px);
                 }
-                @include media(400){
+                @include media(576){
                     @include resa('gap', 4px);
                 }
 
@@ -419,7 +419,7 @@
                     @include media(768){
                         @include resm('font-size', 14px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('font-size', 14px);
                     }
                 }
@@ -434,7 +434,7 @@
                     @include media(768){
                         @include resm('font-size', 12px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('font-size', 12px);
                     }
                 }
@@ -449,7 +449,7 @@
                     @include media(768){
                         @include resm('font-size', 12px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('font-size', 12px);
                     }
                 }
@@ -470,7 +470,7 @@
                 @include media(768){
                     @include resm('font-size', 14px);
                 }
-                @include media(400){
+                @include media(576){
                     @include resa('font-size', 14px);
                 }
             }
@@ -509,7 +509,7 @@
                     @include resm('gap', 4px);
                     @include resm('font-size', 12px);
                 }
-                @include media(400){
+                @include media(576){
                     @include resa('border-radius', 32px);
                     @include resa('width', 103px);
                     @include resa('padding-top', 6px);
@@ -530,7 +530,7 @@
                         @include resm('width', 20px);
                         @include resm('height', 20px);
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('width', 20px);
                         @include resa('height', 20px);
                     }

@@ -16,7 +16,7 @@
     @include media(768) {
       @include resm("width",  696px);
     }
-    @include media(575) {
+    @include media(576) {
       @include resa("width",  296px);
     }
     .h2 {

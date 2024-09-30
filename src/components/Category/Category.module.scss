@@ -22,7 +22,7 @@
         @include resm("margin-top", 36px);
     }
 
-    @include media(400){
+    @include media(576){
       @include resa('width', 296px);
       @include resa("gap", 12px);
       @include resa("margin-top", 32px);
@@ -54,7 +54,7 @@
             @include resm("padding", 12px);
             @include resm("gap", 10px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('width', 142px);
             @include resa("border-radius", 12px);
             @include resa("height", 106px);
@@ -66,7 +66,7 @@
                 @include resm('width', 154px);
     
             }
-            @include media(400){
+            @include media(576){
                 @include resa('width', 142px);
             }
         }
@@ -78,7 +78,7 @@
             @include media(768){
                 @include resm('width', 154px);
             }
-            @include media(400){
+            @include media(576){
                 @include resa('width', 142px);
             }
 
@@ -110,7 +110,7 @@
             @include media(768){
                 @include resm("font-size", 16px);
             }
-            @include media(400){
+            @include media(576){
                 @include resa("font-size", 14px);
             }
             
@@ -133,7 +133,7 @@
                 @include resm("width", 110px);
                 @include resm("height", 101px);
             }
-            @include media(400){
+            @include media(576){
                 @include resa("right", -15px);
                 @include resa("bottom", -20px);
                 @include resa("width", 88px);

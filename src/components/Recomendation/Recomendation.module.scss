@@ -21,7 +21,7 @@
         @include resm("width", 708px);
         @include resm("margin-top", 64px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("font-size", 20px);
         @include resa("width", 296px);
         @include resa("margin-top", 56px);
@@ -45,7 +45,7 @@
         @include resm("width", 708px);
         @include resm("margin-top", 32px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("gap", 0px);
         @include resa("width", 296px);
         @include resa("margin-top", 24px);
@@ -71,7 +71,7 @@
         @include resm("column-gap", 12px);
         @include resm("row-gap", 24px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("width", 296px);
         @include resa("column-gap", 12px);
         @include resa("row-gap", 12px);
@@ -103,7 +103,7 @@
         @include resm("width", 165px);
         @include resm("gap", 8px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("border-radius", 8px);
         @include resa("border-width", 1px);
         @include resa("width", 142px);
@@ -124,7 +124,7 @@
         @include resm("height", 165px);   
         @include resm("width", 165px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("height", 142px);   
         @include resa("width", 142px);
     }
@@ -140,7 +140,7 @@
     @include media(768){ 
         @include resm("width", 165px); 
     }
-    @include media(400){  
+    @include media(576){  
         @include resa("width", 142px);
     }
 }
@@ -162,7 +162,7 @@
         @include resm("bottom", 4px);
         @include resm("left", 4px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("gap", 2px);
         @include resa("bottom", 4px);
         @include resa("left", 4px);
@@ -202,7 +202,7 @@
             @include resm("font-size", 10px);   
             @include resm("border-radius", 49px);
         }
-        @include media(400){
+        @include media(576){
             @include resa("gap", 10px);
             @include resa("padding-top", 0px);
             @include resa("padding-right", 4px);
@@ -252,7 +252,7 @@
         @include resm("padding-left", 6px);
         @include resm("padding-right", 6px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("padding-top", 4px);
         @include resa("padding-bottom", 4px);
         @include resa("padding-left", 6px);
@@ -287,7 +287,7 @@
                 @include resm("width", 125px);
                 @include resm("gap", 4px); 
             }
-            @include media(400){
+            @include media(576){
                 @include resa("font-size", 12px);
                 @include resa("line-height", 18px);
                 @include resa("width", 106px);
@@ -310,7 +310,7 @@
                 @include resm("height", 16px);
             }
 
-            @include media(400){
+            @include media(576){
                 @include resa("width", 12px);
                 @include resa("height", 12px);
             }
@@ -326,7 +326,7 @@
                     @include resm("width", 16px);
                     @include resm("height", 16px);
                 }
-                @include media(400){
+                @include media(576){
                     @include resa("width", 12px);
                     @include resa("height", 12px);
                 }
@@ -345,7 +345,7 @@
             @include resm("font-size", 12px);
             @include resm("margin-top", 4px);
         }
-        @include media(400){
+        @include media(576){
             @include resa("font-size", 12px);
             @include resa("margin-top", 4px);
         }
@@ -367,7 +367,7 @@
             @include resm("font-size", 10px);
             @include resm("margin-top", 8px);
         }
-        @include media(400){
+        @include media(576){
             @include resa('height', 24px);
             @include resa("font-size", 10px);
             @include resa("margin-top", 8px);
@@ -385,7 +385,7 @@
             @include resm("font-size", 10px);
             @include resm("margin-top", 4px);
         }
-        @include media(400){
+        @include media(576){
             @include resa("font-size", 10px);
             @include resa("margin-top", 4px);
         }
@@ -423,7 +423,7 @@
         @include resm("gap", 24px);
         @include resm("border-radius", 20px);
     }
-    @include media(400){
+    @include media(576){
       display: none;
     }
 }

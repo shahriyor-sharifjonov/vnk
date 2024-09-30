@@ -4,10 +4,109 @@ import React, { useEffect, useState } from 'react'
 import styles from './Header.module.scss'
 import Link from 'next/link'
 
+
+
+const navBarValue = [
+    {
+        name: "Нефтепродукты",
+        links: [
+            { name: "Дизельное топливо", src: "#!" },
+            { name: "Бензин АИ-92", src: "#!" },
+            { name: "Бензин АИ-95", src: "#!" },
+            { name: "Бензин АИ-98", src: "#!" },
+            { name: "Масла", src: "#!" },
+            { name: "Битум", src: "#!" }
+        ]
+    },
+    {
+        name: "Агрохимия",
+        links: [{ name: "Удобрения", src: "#!" }]
+    },
+    {
+        name: "Спец. техника",
+        links: [{ name: "Тракторы", src: "#!" }]
+    },
+    {
+        name: "Кредитование",
+        links: [{ name: "Ипотека", src: "#!" }]
+    },
+    {
+        name: "Готовый бизнес",
+        links: [{ name: "Продажа бизнеса", src: "#!" }]
+    },
+    {
+        name: "Вакансии",
+        links: [{ name: "Открытые позиции", src: "#!" }]
+    },
+    {
+        name: "Услуги",
+        links: [{ name: "Консультации", src: "#!" }]
+    }
+];
+
 const NavBar = () => {
+
+
+     // Инициализируем первую категорию как активную
+     const [activeCategory, setActiveCategory] = useState(navBarValue[0].name);
+
+     const handleCategoryClick = (categoryName) => {
+         // Активная категория всегда одна, но первая установлена по умолчанию
+         setActiveCategory(categoryName);
+     };
+
+
+
     return (
         <div className={styles.navBar}>
-            
+            <div className={styles.wrapper}>
+                <h3>Категории</h3>
+                <ul className={styles.categories}>
+                    {navBarValue.map((category, index) => (
+                        <li key={index} className={styles.categoriesCtr}>
+                            <button onClick={() => handleCategoryClick(category.name)} className={styles.categoriesBtn}>
+                                {category.name}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width={24}
+                                    height={24}
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    >
+                                    <mask
+                                        id="mask0_6086_10404"
+                                        style={{ maskType: "alpha" }}
+                                        maskUnits="userSpaceOnUse"
+                                        x={0}
+                                        y={0}
+                                        width={24}
+                                        height={24}
+                                    >
+                                        <rect width={24} height={24} fill="#D9D9D9" />
+                                    </mask>
+                                    <g mask="url(#mask0_6086_10404)">
+                                        <path
+                                        d="M13.0498 12.0001L8.9498 7.9001C8.76647 7.71676 8.6748 7.50426 8.6748 7.2626C8.6748 7.02093 8.76647 6.80843 8.9498 6.6251C9.13314 6.44176 9.34564 6.3501 9.5873 6.3501C9.82897 6.3501 10.0443 6.4446 10.2333 6.6336L14.9748 11.3751C15.0581 11.4651 15.1206 11.5626 15.1623 11.6676C15.204 11.7726 15.2248 11.8851 15.2248 12.0051C15.2248 12.1251 15.204 12.2376 15.1623 12.3426C15.1206 12.4476 15.0581 12.5418 14.9748 12.6251L10.2333 17.3666C10.0443 17.5556 9.83314 17.6459 9.5998 17.6376C9.36647 17.6293 9.15814 17.5334 8.9748 17.3501C8.79147 17.1668 8.6998 16.9543 8.6998 16.7126C8.6998 16.4709 8.79147 16.2584 8.9748 16.0751L13.0498 12.0001Z"
+                                        fill="#183203"
+                                        />
+                                    </g>
+                                </svg>
+
+                            </button>
+                            {activeCategory === category.name && (
+                                <ul className={styles.subCategories}>
+                                    <h4>{category.name}</h4>
+                                    {category.links.map((link, idx) => (
+                                        <li key={idx} className={styles.linksCtr}>
+                                            <a href={link.src}>{link.name}</a>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </div>
     )
 }

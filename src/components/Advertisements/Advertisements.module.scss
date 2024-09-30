@@ -24,7 +24,7 @@
         @include resm("height", 180px);
         @include resm("border-radius", 20px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("margin-top", 50px);
         @include resa("width", 296px);
         @include resa("height", 132px);
@@ -51,7 +51,7 @@
         @include resm("height", 180px);
         @include resm("font-size", 32px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("width", 296px);
         @include resa("height", 132px);
         @include resa("font-size", 14px);
@@ -91,7 +91,7 @@
         @include resm("padding-right", 6px);
         @include resm("padding-left", 6px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("font-size", 8px);
         @include resa("bottom", 8px);
         @include resa("right", 8px);
@@ -117,7 +117,7 @@
     @include media(768){
         @include resm("gap", 13px);
     }
-    @include media(400){
+    @include media(576){
         @include resa("gap", 8px);
         span{
             @include resa('width', 4px, true);
@@ -161,7 +161,7 @@
         @include resm("border-radius", 24px);
         
     }
-    @include media(400){
+    @include media(576){
         @include resa("margin-top", 56px);
         @include resa("font-size", 14px);
         @include resa("width", 296px);

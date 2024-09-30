@@ -24,10 +24,10 @@ function Gallery (){
         <div className={styles.imgGalleryCtr}>
             <div className={styles.card}>
                 <div className={styles.name}>
-                  
+                Дизельное топливо
                 </div>
                 <div className={styles.descr}>
-                  
+                Жидкий продукт, использующийся как топливо в дизельном двигателе внутреннего сгорания.
                 </div>
             </div>
         </div>

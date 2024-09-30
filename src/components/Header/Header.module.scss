@@ -21,7 +21,7 @@
     @include media(768){
         @include resm('width', 696px);
     }
-    @include media(400){
+    @include media(576){
       @include resa('width', 296px);
     }
     .header__topContainer{
@@ -124,7 +124,7 @@
         @include media(768){
             @include resm('width', 696px);
         }
-        @include media(400){
+        @include media(576){
             flex-direction: column;
             @include resa('width', 296px);
             @include resa('gap', 4px);
@@ -139,7 +139,7 @@
             @include media(768){
               flex-direction: row-reverse;
             }
-            @include media(400){
+            @include media(576){
                 justify-content: space-between;
                 align-items: center;
                 @include resa('width', 296px);
@@ -151,7 +151,7 @@
                     @include resm('width', 114px);
                     @include resm('height', 32px);
                 }
-                @include media(400){
+                @include media(576){
                   @include resa('width', 57px);
                   @include resa('height', 16px);
                 }
@@ -174,7 +174,7 @@
                 svg{
                     @include res('width', 24px);
                     @include res('height', 24px);
-                    @include media(400){
+                    @include media(576){
                       @include resa('width', 16px);
                       @include resa('height', 16px);
                     }
@@ -189,7 +189,7 @@
             }
             .logoCtr__link{
                 display: none;
-                @include media(400){
+                @include media(576){
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -223,7 +223,7 @@
             @include media(768){
                 @include resm('width', 420px);
             }
-            @include media(400){
+            @include media(576){
               @include resa('width', 296px);
               @include resa('padding-top', 4px);
               @include resa('padding-bottom', 4px);
@@ -246,11 +246,11 @@
                     &::placeholder{
                         color: #B0B0B0;
                         @include res('font-size', 16px);
-                        @include media(400){
+                        @include media(576){
                             @include resa('font-size', 10px);
                         }
                     }
-                    @include media(400){
+                    @include media(576){
                         @include resa('font-size', 10px);
                     }
                 }
@@ -267,7 +267,7 @@
                     svg{
                         @include res('width', 20px);
                         @include res('height', 20px);
-                        @include media(400){
+                        @include media(576){
                           @include resa('width', 12px);
                           @include resa('height', 12px);
                         }
@@ -284,7 +284,7 @@
             @include media(1024){
               @include rest('gap', 0px);
             }
-            @include media(400){
+            @include media(576){
               display: none;
             }
             .linksCtr__link{
@@ -338,7 +338,7 @@
     @include media(768){
         @include resm('width', 696px);
     }
-    @include media(400){
+    @include media(576){
       @include resa('width', 296px);
     }
     .topPrices__costCtr{
@@ -348,10 +348,10 @@
         @include media(768){
             @include resm('gap', 6px);
         }
-        @include media(400){
+        @include media(576){
           @include resa('gap', 4px);
         }
-        @include media(400){
+        @include media(576){
           
             &:nth-child(4){
                 display: none;
@@ -371,7 +371,7 @@
             @include media(768){
                 @include resm('font-size', 16px);
             }
-            @include media(400){
+            @include media(576){
                 @include resa('font-size', 12px);
             }
         }
@@ -385,7 +385,7 @@
             @include media(768){
                 @include resm('font-size', 16px);
             }
-            @include media(400){
+            @include media(576){
                 @include resa('font-size', 12px);
             }
         }
@@ -408,5 +408,73 @@
     height: 100%;
     left: 0;
     top: 0;
-    // @include res("top", 205px);
+
+    .wrapper{
+        margin-right: auto;
+        margin-left: auto;
+    
+        @include res('padding-top', 218px);
+        @include res('width', 1296px);
+        @include media(1024){
+            @include rest('width', 936px)
+        }
+        @include media(768){
+            @include resm('width', 696px)
+        }
+        @include media(576){
+            @include resa('width', 296px) 
+        }
+        h3{
+            color: #183203;
+            @include res('font-size', 32px);
+            @include res('margin-bottom', 12px);
+        }
+    }
+    
+    
+    .categories{
+        position: relative;
+        @include res('width', 715px);
+        .categoriesCtr{
+            border-right: 1px solid rgba(24, 50, 3, 0.20);
+            display: flex;
+            @include res('width', 362px);
+            .categoriesBtn{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                font-weight: 600;
+                justify-content: space-between;
+                color: #183203;
+                @include res('font-size', 16px);
+                @include res('padding-top', 12px);
+                @include res('padding-bottom', 12px);
+                @include res('padding-right', 8px);
+                @include res('padding-left', 8px);
+                svg{
+                    @include res('width', 24px);
+                    @include res('height', 24px);
+                }
+            }
+            .subCategories{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 0;
+                right: 0;
+                @include res('width', 321px);
+                @include res('gap', 24px);
+                h4{
+                    color: #183203;
+                    @include res('font-size', 24px);
+                }
+                .linksCtr a{
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: #183203;
+                    @include res('font-size', 16px);
+                }
+            }
+        }
+    }
 }
