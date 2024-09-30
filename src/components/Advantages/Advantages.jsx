@@ -15,6 +15,21 @@ function AdvantagesCard ({imgSrc, name, descr}){
 }
 
 
+
+
+const GalleryCard = ({name, descr}) => {
+    return (
+        <div className={styles.galleryCard}>
+            <div className={styles.name}>
+                {name}
+            </div>
+            <div className={styles.descr}>
+                {descr}
+            </div>
+        </div>
+    )
+}
+
 function Gallery (){
     return (
         <>
@@ -22,14 +37,32 @@ function Gallery (){
             Широкая линейка продуктов напрямую от производителей с конкурентными условиями
         </h2>
         <div className={styles.imgGalleryCtr}>
-            <div className={styles.card}>
-                <div className={styles.name}>
-                Дизельное топливо
-                </div>
-                <div className={styles.descr}>
-                Жидкий продукт, использующийся как топливо в дизельном двигателе внутреннего сгорания.
-                </div>
-            </div>
+
+            <GalleryCard 
+                name={'Дизельное топливо'}
+                descr={'Жидкий продукт, использующийся как топливо в дизельном двигателе внутреннего сгорания.'}
+            />
+            <GalleryCard 
+                name={'Сжиженный газ'}
+                descr={'Газ, который при некоторых условиях может превращаться в жидкость.'}
+            />
+            <GalleryCard 
+                name={'Бензин'}
+                descr={'Горючая смесь лёгких углеводородов с температурой кипения от + 33 до +205 °C (в зависимости от примесей).'}
+            />
+            <GalleryCard 
+                name={'Масла'}
+                descr={'Способствуют предохранению деталей от износа в результате трения между движущимися деталями.'}
+            />
+            <GalleryCard 
+                name={'Агрохимия'}
+                descr={'Удобрения для питания растений и повышения плодородия почв.'}
+            />
+            <GalleryCard 
+                name={'Мазут и битум'}
+                descr={'Жидкий продукт, остающийся после переработки нефти.'}
+            />
+
         </div>
         </>
     )

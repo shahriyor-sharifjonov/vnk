@@ -1,0 +1,183 @@
+@import "@/styles/mixins.scss";
+
+.ourPlatfrom{
+    margin-right: auto;
+    margin-left: auto;
+    @include res('width', 1296px);
+    @include res('margin-top', 152px);
+    @include media(1024){
+        @include rest('width', 936px)
+    }
+    @include media(768){
+        @include resm('width', 696px)
+    }
+    @include media(576){
+        @include resa('width', 296px) 
+    }
+    .heading{
+        @include res('margin-bottom', 64px);
+        @include res('width', 532px);
+        h4{
+            @include res('margin-bottom', 32px);
+        }
+        p{
+            font-weight: 500;
+            @include res('font-size', 20px);
+        }
+    }
+    .cpu{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @include res('height', 484px);
+        .cpuImg{
+            position: relative;
+            z-index: 3;
+            @include res('width', 805px);
+            @include res('height', 344px);
+            @include res('top', 53px);
+            @include res('left', 249px);
+        }
+        .card{
+            width: fit-content;
+            background: var(--Yellow-400, #FFF237);
+            font-weight: 600;
+            z-index: 5;
+            position: absolute;
+            
+            @include res('padding', 32px);
+            @include res('border-radius', 36px);
+            @include res('font-size', 20px);
+            &:nth-child(1){
+                top: 0;
+                @include res('right', 42px);
+            }
+            &:nth-child(2){
+                @include res('bottom', 12px);
+                @include res('left', 96px);
+            }
+            &:nth-child(3){
+                @include res('bottom', 0px);
+                @include res('right', 41px);
+            }
+        }
+    }
+}
+.indicator{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    @include res('width', 1296px);
+    @include res('gap', 64px);
+    @include res('margin-top', 152px);
+    @include media(1024){
+        @include rest('width', 936px)
+    }
+    @include media(768){
+        @include resm('width', 696px)
+    }
+    @include media(576){
+        @include resa('width', 296px) 
+    }
+    .indicatorCtr{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        align-self: stretch;
+        .info{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            @include res('width', 459px);
+            @include res('gap', 24px);
+            .infoCtr{
+                display: flex;
+                flex-direction: column;
+                align-self: stretch;
+
+                @include res('padding', 24px);
+                @include res('gap', 12px);
+                h4 {
+                    color: var(--Black-Green, #142B02);
+                }
+                p{
+                    color: var(--Gray-700, #5E5E5E);
+                    font-weight: 500;
+                    @include res('font-size', 20px);
+                }
+            }
+        }
+        .graphCtr{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include res('width', 568px);
+            @include res('gap', 24px);
+            .graphName{
+                font-weight: 600;
+                @include res('font-size', 32px);
+            }
+            .graphs{
+                display: flex;
+                align-items: flex-end;
+                align-self: stretch;
+                @include res('gap', 32px);
+                .graph{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    @include res('gap', 12px);
+                    .year{
+                        font-weight: 700;
+                        @include res('font-size', 24px);
+                    }
+                    .bar{
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        width: 100%;
+                        text-align: center;
+                        font-weight: 600;
+                        flex: 1 0 0;
+                        align-self: stretch;
+                        @include res('border-radius', 16px);
+                        @include res('padding', 24px);
+                        @include res('font-size', 24px);
+                        @include res('gap', 10px);
+                    }
+                    &:nth-child(1){
+                        @include res('width', 160px);
+                        @include res('height', 290px);
+                        .bar{
+                            background: var(--Yellow-400, #FFF237);
+                        }
+                    }
+                    &:nth-child(2){
+                        @include res('width', 172px);
+                        @include res('height', 426px);
+                        .bar{
+                            background: var(--Green-400, #8DF04A);
+                        }
+                    }
+                    &:nth-child(3){
+                        @include res('width', 172px);
+                        @include res('height', 542px);
+                        .bar{
+                            background: var(--Green-600, #439F00);
+                            color: var(--White, #FFF);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    h2{
+        text-align: center;
+    }
+    .avarage{
+        font-weight: 600;
+        text-align: center;
+        @include res('font-size', 32px);
+    }
+}

@@ -3,6 +3,7 @@ import Banner from '@/components/Banner/Banner'
 import Bussineses from '@/components/Bussineses/Bussineses'
 import Footer from '@/components/Footer/Footer'
 import Header from '@/components/Header/Header'
+import OurPlatfrom from '@/components/OurPlatfrom/OurPlatfrom'
 import VideoSliderSection from '@/components/VideoSliderSection/VideoSliderSection'
 import Head from 'next/head'
 import React from 'react'
@@ -23,6 +24,7 @@ export default function Franshiza() {
             <VideoSliderSection />
             <Bussineses />
             <Advantages />
+            <OurPlatfrom />
         </main>
     <Footer />
   </>
