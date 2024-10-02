@@ -55,6 +55,8 @@ export default function Bussineses() {
             </Swiper>
         </div>
     </section>
+
+    
     <section className={styles.section3}>
         <div className={styles.imgLaptop}>
             <img src="/ImageLaptop.png" alt="" />

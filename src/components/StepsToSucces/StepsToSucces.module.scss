@@ -1,0 +1,122 @@
+@import "@/styles/mixins.scss";
+
+
+.steps{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    @include res('width', 1296px);
+    @include res('gap', 64px);
+    @include res('margin-top', 152px);
+    @include media(1024){
+        @include rest('width', 936px)
+    }
+    @include media(768){
+        @include resm('width', 696px)
+    }
+    @include media(576){
+        @include resa('width', 296px) 
+    }
+    .stepCards{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        @include res('gap', 24px);
+        .stepCard{
+            border-color: var(--Green-500, #63E80E);
+            border-style: solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include res('width', 636px);
+            @include res('height', 290px);
+            @include res('padding', 24px);
+            @include res('border-radius', 24px);
+            @include res('border-width', 1px);
+            .heading{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-self: stretch;
+                h4{
+                    color: var(--Black-Green, #142B02);
+                }
+            }
+            p {
+                font-weight: 500;
+                color: var(--Gray-700, #5E5E5E);
+                @include res('font-size', 20px);
+            }
+        }
+    }
+    h2{
+        text-align: center;
+    }
+    button{
+        margin-right: auto;
+        margin-left: auto;
+        width: fit-content;
+        font-weight: 600;
+        color: var(--Black-Green, #142B02);
+        background: var(--Green-500, #63E80E);  
+        @include res('padding-right', 24px);
+        @include res('padding-left', 24px);
+        @include res('padding-top', 20px);
+        @include res('padding-bottom', 20px);
+        @include res('border-radius', 14px);
+        @include res('font-size', 24px);
+    }
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    @include res('width', 1296px);
+    @include res('gap', 64px);
+    @include res('margin-top', 152px);
+    @include media(1024){
+        @include rest('width', 936px)
+    }
+    @include media(768){
+        @include resm('width', 696px)
+    }
+    @include media(576){
+        @include resa('width', 296px) 
+    }
+    .images {
+        display: flex;
+        justify-content: space-between;
+        img {
+            @include res('width', 416px);
+            @include res('height', 416px);
+        }
+    }
+    .dillers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include res('gap', 32px);
+        .slider{
+            width: 100%;
+            .imgCard img{
+                @include res('width', 249px);
+                @include res('height', 100px);
+            }
+        }
+        .names {
+            display: flex;
+            align-items: center;
+            @include res('gap', 8px);
+            img{
+                @include res('width', 64px);
+                @include res('height', 64px);
+            }
+        }
+    }
+    h2{
+        text-align: center;
+    }
+}

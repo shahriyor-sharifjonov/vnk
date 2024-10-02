@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  color: var(--Black-Green, #142B02);
   font-family: 'Manrope', sans-serif;
   &:focus,
   &:active{
@@ -120,10 +121,26 @@ body {
   }
 }
 
+.dillers .swiper-wrapper{
+  @include res('gap', 0px);
+  .swiper-slide {
+    @include res('margin-right', 54px, true);
+  }
+}
+
 
 h2{
   font-weight: 700;
   @include res("font-size", 36px);
+  @include media(1024){
+    @include rest("font-size", 32px);
+  }
+  @include media(768){
+    @include resm("font-size", 32px);
+  }
+  @include media(567){
+    @include resa("font-size", 24px);
+  }
 }
 
 h4{
