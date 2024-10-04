@@ -400,6 +400,8 @@
     line-height: 0;
 }
 
+// 1440px responsive
+
 .navBar{
     z-index: 100;
     background-color: white;
@@ -416,18 +418,25 @@
         @include res('padding-top', 218px);
         @include res('width', 1296px);
         @include media(1024){
-            @include rest('width', 936px)
+            @include rest('width', 936px);
+            @include rest('padding-top', 192px);
         }
         @include media(768){
-            @include resm('width', 696px)
+            @include resm('width', 696px);
+            @include resm('padding-top', 76px);
         }
         @include media(576){
-            @include resa('width', 296px) 
+            @include resa('width', 296px) ;
+            @include resa('padding-top', 96px);
         }
         h3{
             color: #183203;
             @include res('font-size', 32px);
             @include res('margin-bottom', 12px);
+            @include media(1024){
+                @include rest('font-size', 32px);
+                @include rest('margin-bottom', 12px);
+            }
         }
     }
     
@@ -435,10 +444,16 @@
     .categories{
         position: relative;
         @include res('width', 715px);
+        @include media(1024){
+            @include rest('width', 715px);
+        }
         .categoriesCtr{
             border-right: 1px solid rgba(24, 50, 3, 0.20);
             display: flex;
             @include res('width', 362px);
+            @include media(1024){
+                @include rest('width', 362px);
+            }
             .categoriesBtn{
                 display: flex;
                 width: 100%;
@@ -451,9 +466,21 @@
                 @include res('padding-bottom', 12px);
                 @include res('padding-right', 8px);
                 @include res('padding-left', 8px);
+                @include media(1024){
+                    @include rest('font-size', 16px);
+                    @include rest('padding-top', 12px);
+                    @include rest('padding-bottom', 12px);
+                    @include rest('padding-right', 8px);
+                    @include rest('padding-left', 8px);
+                  
+                }
                 svg{
                     @include res('width', 24px);
                     @include res('height', 24px);
+                    @include media(1024){
+                        @include rest('width', 24px);
+                        @include rest('height', 24px);
+                    }
                 }
             }
             .subCategories{
@@ -464,15 +491,25 @@
                 right: 0;
                 @include res('width', 321px);
                 @include res('gap', 24px);
-                h4{
+                @include media(1024){
+                    @include rest('width', 321px);
+                    @include rest('gap', 24px);
+                }
+                h4 {
                     color: #183203;
                     @include res('font-size', 24px);
+                    @include media(1024){
+                        @include rest('font-size', 24px);
+                    }
                 }
-                .linksCtr a{
+                .linksCtr a {
                     font-weight: 600;
                     text-decoration: none;
                     color: #183203;
                     @include res('font-size', 16px);
+                    @include media(1024){
+                        @include rest('font-size', 16px);
+                    }
                 }
                 @include media(576){
                     display: none;

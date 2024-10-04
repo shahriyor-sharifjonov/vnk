@@ -1,3 +1,4 @@
+// fully reponsive
 @import "@/styles/mixins.scss";
 
 .ourPlatfrom{
@@ -149,19 +150,53 @@
         justify-content: space-between;
         align-items: flex-end;
         align-self: stretch;
+        @include media(768){
+            align-items: center;
+            flex-direction: column;
+        }
+        @include media(576){
+            @include resa('gap', 24px);
+        }
         .info{
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             @include res('width', 459px);
             @include res('gap', 24px);
+            @include media(1024){
+                @include rest('width', 406px);
+                @include rest('gap', 24px);   
+            }
+            @include media(768){
+                flex-direction: row;
+                @include resm('width', 696px);
+                @include resm('gap', 24px); 
+            }
+            @include media(576){
+                flex-direction: column;
+                @include resa('width', 296px);
+                @include resa('gap', 8px); 
+            }
             .infoCtr{
                 display: flex;
                 flex-direction: column;
                 align-self: stretch;
-
                 @include res('padding', 24px);
                 @include res('gap', 12px);
+                @include media(1024){
+                    @include rest('padding', 20px);
+                    @include rest('gap', 12px);
+                }
+                @include media(768){
+                    @include resm('width', 216px);
+                    @include resm('padding', 16px);
+                    @include resm('gap', 12px);    
+                }
+                @include media(576){
+                    @include resa('width', 296px);
+                    @include resa('padding', 12px);
+                    @include resa('gap', 8px);    
+                }
                 h4 {
                     color: var(--Black-Green, #142B02);
                 }
@@ -169,6 +204,15 @@
                     color: var(--Gray-700, #5E5E5E);
                     font-weight: 500;
                     @include res('font-size', 20px);
+                    @include media(1024){
+                        @include rest('font-size', 16px);
+                    }
+                    @include media(768){
+                        @include resm('font-size', 12px);
+                    }
+                    @include media(576){
+                        @include resa('font-size', 12px);
+                    }
                 }
             }
         }
@@ -178,23 +222,70 @@
             align-items: center;
             @include res('width', 568px);
             @include res('gap', 24px);
+            @include media(1024){
+                @include rest('width', 454px);
+                @include rest('gap', 24px);
+            }
+            @include media(768){
+                width: fit-content;
+                @include resm('gap', 24px);
+            }
+            @include media(576){
+                @include resa('gap', 12px);
+            }
             .graphName{
                 font-weight: 600;
                 @include res('font-size', 32px);
+                @include media(1024){
+                    @include rest('font-size', 24px);
+                }
+                @include media(768){
+                    @include resm('font-size', 20px);
+                }
+                @include media(576){
+                    @include resa('font-size', 16px);
+                }
             }
             .graphs{
                 display: flex;
                 align-items: flex-end;
                 align-self: stretch;
                 @include res('gap', 32px);
+                @include media(1024){
+                    @include rest('gap', 32px);
+                }
+                @include media(768){
+                    @include resm('gap', 32px);
+                }
+                @include media(567){
+                    @include resa('gap', 8px);
+                }
                 .graph{
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     @include res('gap', 12px);
+                    @include media(1024){
+                        @include rest('gap', 12px);
+                    }
+                    @include media(768){
+                        @include resm('gap', 8px);
+                    }
+                    @include media(567){
+                        @include resa('gap', 4px);
+                    }
                     .year{
                         font-weight: 700;
                         @include res('font-size', 24px);
+                        @include media(1024){
+                            @include rest('font-size', 20px);
+                        }
+                        @include media(768){
+                            @include resm('font-size', 16px);
+                        }
+                        @include media(576){
+                            @include resa('font-size', 14px);
+                        }
                     }
                     .bar{
                         display: flex;
@@ -208,11 +299,37 @@
                         @include res('border-radius', 16px);
                         @include res('padding', 24px);
                         @include res('font-size', 24px);
-                        @include res('gap', 10px);
+                        @include media(1024){
+                            @include rest('border-radius', 16px);
+                            @include rest('padding', 16px);
+                            @include rest('font-size', 20px);
+                        }
+                        @include media(768){
+                            @include resm('border-radius', 16px);
+                            @include resm('padding', 16px);
+                            @include resm('font-size', 20px);
+                        }
+                        @include media(576){
+                            @include resa('border-radius', 16px);
+                            @include resa('padding', 16px);
+                            @include resa('font-size', 14px);
+                        }
                     }
                     &:nth-child(1){
                         @include res('width', 160px);
                         @include res('height', 290px);
+                        @include media(1024){
+                            @include rest('width', 130px);
+                            @include rest('height', 214px);
+                        }
+                        @include media(768){
+                            @include resm('width', 130px);
+                            @include resm('height', 198px);
+                        }
+                        @include media(576){
+                            @include resa('width', 93px);
+                            @include resa('height', 157px);
+                        }
                         .bar{
                             background: var(--Yellow-400, #FFF237);
                         }
@@ -220,6 +337,18 @@
                     &:nth-child(2){
                         @include res('width', 172px);
                         @include res('height', 426px);
+                        @include media(1024){
+                            @include rest('width', 130px);
+                            @include rest('height', 324px);
+                        }
+                        @include media(768){
+                            @include resm('width', 130px);
+                            @include resm('height', 284px);
+                        }
+                        @include media(576){
+                            @include resa('width', 93px);
+                            @include resa('height', 228px);
+                        }
                         .bar{
                             background: var(--Green-400, #8DF04A);
                         }
@@ -227,6 +356,18 @@
                     &:nth-child(3){
                         @include res('width', 172px);
                         @include res('height', 542px);
+                        @include media(1024){
+                            @include rest('width', 130px);
+                            @include rest('height', 440px);
+                        }
+                        @include media(768){
+                            @include resm('width', 130px);
+                            @include resm('height', 355px);
+                        }
+                        @include media(576){
+                            @include resa('width', 93px);
+                            @include resa('height', 272px);
+                        }
                         .bar{
                             background: var(--Green-600, #439F00);
                             color: var(--White, #FFF);
@@ -243,5 +384,14 @@
         font-weight: 600;
         text-align: center;
         @include res('font-size', 32px);
+        @include media(1024){
+            @include rest('font-size', 24px);
+        }
+        @include media(768){
+            @include resm('font-size', 24px);
+        }
+        @include media(567){
+            @include resa('font-size', 16px);
+        }
     }
 }

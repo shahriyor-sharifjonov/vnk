@@ -1,7 +1,8 @@
+// fully responsive
 @import "@/styles/mixins.scss";
 
 
-.steps{
+.steps {
     display: flex;
     flex-direction: column;
     margin-right: auto;
@@ -13,16 +14,16 @@
         @include rest('width', 936px)
     }
     @include media(768){
-        @include resm('width', 696px)
-    }
-    @include media(576){
-        @include resa('width', 296px) 
+        display: none;
     }
     .stepCards{
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         @include res('gap', 24px);
+        @include media(1024){
+            @include rest('gap', 24px);
+        }
         .stepCard{
             border-color: var(--Green-500, #63E80E);
             border-style: solid;
@@ -34,6 +35,13 @@
             @include res('padding', 24px);
             @include res('border-radius', 24px);
             @include res('border-width', 1px);
+            @include media(1024){
+                @include rest('width', 454px);
+                @include rest('height', 248px);
+                @include rest('padding', 24px);
+                @include rest('border-radius', 24px);
+                @include rest('border-width', 1px);
+            }
             .heading{
                 display: flex;
                 justify-content: space-between;
@@ -47,6 +55,9 @@
                 font-weight: 500;
                 color: var(--Gray-700, #5E5E5E);
                 @include res('font-size', 20px);
+                @include media(1024){
+                    @include rest('font-size', 16px);
+                }
             }
         }
     }
@@ -66,6 +77,14 @@
         @include res('padding-bottom', 20px);
         @include res('border-radius', 14px);
         @include res('font-size', 24px);
+        @include media(1024){
+            @include rest('padding-right', 16px);
+            @include rest('padding-left', 16px);
+            @include rest('padding-top', 12px);
+            @include rest('padding-bottom', 12px);
+            @include rest('border-radius', 8px);
+            @include rest('font-size', 20px);
+        }
     }
 }
 
@@ -78,13 +97,19 @@
     @include res('gap', 64px);
     @include res('margin-top', 152px);
     @include media(1024){
-        @include rest('width', 936px)
+        @include rest('width', 936px);
+        @include rest('gap', 48px);
+        @include rest('margin-top', 112px);
     }
     @include media(768){
-        @include resm('width', 696px)
+        @include resm('width', 696px);
+        @include resm('gap', 32px);
+        @include resm('margin-top', 96px);
     }
     @include media(576){
-        @include resa('width', 296px) 
+        @include resa('width', 296px);
+        @include resa('gap', 32px);
+        @include resa('margin-top', 64px);
     }
     .images {
         display: flex;
@@ -92,6 +117,18 @@
         img {
             @include res('width', 416px);
             @include res('height', 416px);
+            @include media(1024){
+                @include rest('width', 296px);
+                @include rest('height', 296px);
+            }
+            @include media(768){
+                @include resm('width', 216px);
+                @include resm('height', 216px);
+            }
+            @include media(567){
+                @include resa('width', 96px);
+                @include resa('height', 96px);
+            }
         }
     }
     .dillers {
@@ -99,20 +136,64 @@
         flex-direction: column;
         align-items: center;
         @include res('gap', 32px);
+        @include media(1024){
+            @include rest('gap', 24px);
+        }
+        @include media(768){
+            @include resm('gap', 24px);
+        }
+        @include media(576){
+            @include resa('gap', 20px);
+        }
+
         .slider{
             width: 100%;
             .imgCard img{
                 @include res('width', 249px);
                 @include res('height', 100px);
+                @include media(1024){
+                    @include rest('width', 177px);
+                    @include rest('height', 72px);
+                }
+                @include media(768){
+                    @include resm('width', 145px);
+                    @include resm('height', 58px);
+                }
+                @include media(576){
+                    @include resa('width', 100px);
+                    @include resa('height', 40px);
+                }
             }
         }
         .names {
             display: flex;
             align-items: center;
             @include res('gap', 8px);
+            @include media(1024){
+                @include rest('gap', 8px);
+            }
+            @include media(768){
+                @include resm('gap', 8px);
+            }
+            @include media(567){
+                flex-direction: column;
+                @include resa('gap', 0px);
+            }
             img{
                 @include res('width', 64px);
                 @include res('height', 64px);
+                @include media(1024){
+                    @include rest('width', 48px);
+                    @include rest('height', 48px);
+                }
+                @include media(768){
+                    @include resm('width', 48px);
+                    @include resm('height', 48px);
+                }
+                @include media(567){
+                    @include resa('width', 32px);
+                    @include resa('height', 32px);
+                }
             }
         }
     }
