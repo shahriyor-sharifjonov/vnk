@@ -17,12 +17,39 @@
     .heading{
         @include res('margin-bottom', 64px);
         @include res('width', 532px);
+        @include media(1024){
+            @include rest('margin-bottom', 48px);
+            @include rest('width', 532px);
+        }
+        @include media(768){
+            @include resm('margin-bottom', 32px);
+            @include resm('width', 532px);
+        }
         h4{
             @include res('margin-bottom', 32px);
+            @include media(1024){
+                @include rest('margin-bottom', 24px);
+            }
+            @include media(768){
+                @include resm('margin-bottom', 24px);
+            }
+            @include media(567){
+                @include resa('margin-bottom', 12px);
+            }
         }
         p{
             font-weight: 500;
             @include res('font-size', 20px);
+            @include media(1024){
+                @include rest('font-size', 16px);
+            }
+            @include media(768){
+                @include resm('font-size', 12px);
+            }
+            @include media(567){
+                @include resa('font-size', 10px);
+            }
+
         }
     }
     .cpu{
@@ -30,6 +57,9 @@
         flex-direction: column;
         position: relative;
         @include res('height', 484px);
+        @include media(576){
+            @include resa('height', 359px);
+        }
         .cpuImg{
             position: relative;
             z-index: 3;
@@ -37,6 +67,19 @@
             @include res('height', 344px);
             @include res('top', 53px);
             @include res('left', 249px);
+            @include media(576){
+                display: none;
+            }
+            &.second {
+                display: none;
+                @include media(576){
+                    display: block;
+                    @include resa('width', 175px);
+                    @include resa('height', 337px);
+                    @include resa('top', 22px);
+                    @include resa('left', 121px);
+                }
+            }
         }
         .card{
             width: fit-content;
@@ -44,21 +87,42 @@
             font-weight: 600;
             z-index: 5;
             position: absolute;
-            
+            height: fit-content;
             @include res('padding', 32px);
             @include res('border-radius', 36px);
             @include res('font-size', 20px);
+            @include media(576){
+                @include resa('padding-left', 14px);
+                @include resa('padding-right', 14px);
+                @include resa('padding-top', 12px);
+                @include resa('padding-bottom', 12px);
+                @include resa('border-radius', 36px);
+                @include resa('font-size', 14px);
+            }
             &:nth-child(1){
                 top: 0;
                 @include res('right', 42px);
+                @include media(576){
+                    @include resa('left', 0px);
+                    @include resa('top', 54px);
+                }
+               
             }
             &:nth-child(2){
                 @include res('bottom', 12px);
                 @include res('left', 96px);
+                @include media(576){
+                    @include resa('left', 0px);
+                    @include resa('top', 0px);
+                }
             }
             &:nth-child(3){
                 @include res('bottom', 0px);
                 @include res('right', 41px);
+                @include media(576){
+                    @include resa('left', 0px);
+                    @include resa('top', 108px);
+                }
             }
         }
     }

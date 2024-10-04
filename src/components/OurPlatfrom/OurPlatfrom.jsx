@@ -60,6 +60,7 @@ export default function OurPlatfrom() {
         </div>
         <div className={styles.cpu}>
             <img src="/Group 6.svg" className={styles.cpuImg} alt="" />
+            <img src="/cpu-second.svg" className={`${styles.cpuImg} ${styles.second}`} alt="" />
             <div className={styles.cards}>
                 <span className={styles.card}>Автопросчет цены</span>
                 <span className={styles.card}>Личный кабинет</span>

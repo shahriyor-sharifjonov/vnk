@@ -25,8 +25,8 @@ $baseValueSmall: 320px;
 @mixin rest($property, $value) {
     #{$property}: calc(($value / $baseValueTablet) * 100vw);
 }
-@mixin resm($property, $value) {
-    #{$property}: calc(($value / $baseValueMedium) * 100vw);
+@mixin resm($property, $value, $important: false) {
+    #{$property}: calc(($value / $baseValueMedium) * 100vw) #{if($important, '!important', '')};
 }
 @mixin resa($property, $value, $important: false) {
   #{$property}: calc(($value / $baseValueSmall) * 100vw) #{if($important, '!important', '')};

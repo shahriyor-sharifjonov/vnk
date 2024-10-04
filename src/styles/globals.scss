@@ -146,4 +146,13 @@ h2{
 h4{
   font-weight: 700;
   @include res('font-size', 24px);
+  @include media(1024){
+    @include rest('font-size', 24px);
+  }
+  @include media(768){
+    @include resm('font-size', 20px);
+  }
+  @include media(567){
+    @include resa('font-size', 16px);
+  }
 }

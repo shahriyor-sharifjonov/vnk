@@ -8,7 +8,7 @@ function AdvantagesCard ({imgSrc, name, descr}){
             <img src={imgSrc} className={styles.cardImg} alt="svg" />
             <div className="info">
                 <h3 className={styles.name}>{name}</h3>
-                <p className={styles.desrc}>{descr}</p>
+                <p className={styles.descr}>{descr}</p>
             </div>
         </div>
     )
