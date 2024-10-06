@@ -37,6 +37,7 @@
     align-items: center;
     justify-content: center;
     line-height: 0;
+    color: var(--Green-100, #DFF9CA);
     font-weight: 700;
     @include res("width", 1296px);
     @include res("height", 246px);

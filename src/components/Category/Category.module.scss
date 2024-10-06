@@ -27,6 +27,14 @@
       @include resa("gap", 12px);
       @include resa("margin-top", 32px);
     }
+    &.second .category__card{
+        @include media(768){
+            @include resm('width', 154px);
+        }
+        @include media(576){
+            @include resa('width', 142px);
+        }
+    }
     .category__card{
         display: flex;
         flex-direction: column;
@@ -81,7 +89,6 @@
             @include media(576){
                 @include resa('width', 142px);
             }
-
         }
         &.yellow{   
             background: var(--Yellow-300, #FFF26D);
@@ -89,8 +96,14 @@
         &.green{   
             background: var(--Green-300, #A6E479);
         }
+        &.green500{   
+            background: var(--Green-400, #8DF04A);
+        }
         &.gray{
             background: var(--Gray-100, #EAEAEA);
+        }
+        &.gray50{
+            background: var(--Gray-50, #FAFAFA);
         }
         &.lightGreen{
             background: var(--Green-100, #DFF9CA);
@@ -143,3 +156,4 @@
         }
     }
 }
+
