@@ -157,3 +157,83 @@
     }
 }
 
+.categoryPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapper{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include res('width', 1004px);
+        @include res('height', 644px);
+        @include res('gap', 32px);
+        @include res('border-radius', 32px);
+        @include res('padding', 32px);
+        .heading{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-self: stretch;
+            svg{
+                cursor: pointer;
+                @include res('width', 44px);
+                @include res('height', 44px);
+            }
+        }
+        .ctrs{
+            display: flex;
+            align-items: flex-start;
+            overflow-y: scroll;
+            align-content: flex-start;
+            align-self: stretch;
+            flex-wrap: wrap;
+            @include res('height', 504px);
+            @include res('gap', 24px);
+            .ctr{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                @include res('width', 280px);
+                @include res('gap', 8px);
+                .ctr_heading{
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-self: stretch;
+                    @include res('font-size', 16px);
+                    @include res('padding-right', 8px);
+                    @include res('padding-left', 8px);
+                    @include res('padding-top', 12px);
+                    @include res('padding-bottom', 12px);
+                    svg{
+                        @include res('width', 24px);
+                        @include res('height', 24px);
+                    }
+                }
+                .links{
+                    display: flex;
+                    flex-direction: column;
+                    @include res('padding-left', 8px);
+                    @include res('padding-right', 8px);
+                    @include res('gap', 16px);
+                    .popupLink{
+                        font-weight: 600;
+                        text-decoration: none;
+                        color: var(--Gray-800, #4B4B4B);
+                        @include res('font-size', 14px);
+                    }
+                }
+            }
+        }
+    }
+}

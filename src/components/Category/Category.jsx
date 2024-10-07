@@ -31,7 +31,7 @@ const Category = () => {
                 cardClass={styles.green} 
             />
             <CategoryCard 
-                href='#!' 
+                href='/tehnika' 
                 name={'Спец. техника'} 
                 imgSrc={'/Image2.png'} 
                 cardClass={styles.gray} 
