@@ -1,0 +1,78 @@
+@import "@/styles/mixins.scss";
+
+
+.marksSection{
+    .marksHeading{
+        display: flex;
+        align-items: center;
+        @include res('gap', 24px);
+        @include res('margin-bottom', 24px);
+        h4.all{
+            color: var(--Green-500, #63E80E);
+        }
+    }
+    .markCtrs{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include res('gap', 24px);
+        .linkCtr{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            @include res('gap', 12px);
+            @include res('width', 129px);
+            @include res('padding-left', 8px);
+            @include res('padding-right', 8px);
+            a {
+                color: var(--Gray-800, #4B4B4B);
+                text-decoration: none;
+                font-weight: 600;
+                @include res('font-size', 14px);
+            }
+        }
+    }
+}
+.sortSection{
+    display: flex;
+    position: relative;
+    align-items: center;
+    @include res('gap', 32px);
+    .sortText{
+        color: var(--Gray-500, #868686);
+        font-weight: 600;
+        @include res('font-size', 24px);
+    }
+    .sortBtn{
+        color: var(--Black-Green, #142B02);
+        display: flex;
+        padding: 16px 24px;
+        align-items: center;
+        font-weight: 500;
+        @include res('gap', 24px);
+        @include res('padding-top', 16px);
+        @include res('padding-bottom', 16px);
+        @include res('padding-right', 24px);
+        @include res('padding-left', 24px);
+        @include res('font-size', 24px);
+        svg{
+            @include res('width', 32px);
+            @include res('height', 32px);
+        }
+    }
+    .menu{
+        position: absolute;
+        bottom: -100%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        @include res('width', 286px);
+        @include res('border-radius', 12px);
+        .menuLink{
+            @include res('padding-top', 16px);
+            @include res('padding-bottom', 16px);
+            @include res('padding-right', 24px);
+            @include res('padding-left', 24px);
+        }
+    }
+}

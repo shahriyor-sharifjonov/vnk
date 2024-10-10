@@ -156,44 +156,44 @@ export default function CategoryTwo() {
 
     <div className={`${styles.category} ${styles.second}`}>
         <CategoryCard 
-            href='#!' 
-            name={'Нефтепродукты'} 
+            href='/gruzovik' 
+            name={'Грузовики'} 
             imgSrc={'/Image7.png'} 
             cardClass={styles.lightYellow} 
             />
         <CategoryCard 
             href='#!' 
-            name={'Агрохимия'} 
+            name={'Трактора'} 
             imgSrc={'/Image2.png'} 
             cardClass={styles.gray50} 
         />
         <CategoryCard 
             href='#!' 
-            name={'Спец. техника'} 
+            name={'Экскаваторы'} 
             imgSrc={'/Image8.png'} 
             cardClass={styles.lightGreen} 
         />
         <CategoryCard 
             href='#!' 
-            name={'Реализация урожая'} 
+            name={'Погрузчики'} 
             imgSrc={'/Image9.png'} 
             cardClass={styles.gray} 
         />
         <CategoryCard 
             href='#!' 
-            name={'Нефтепродукты'} 
+            name={'Комбайны'} 
             imgSrc={'/Image10.png'} 
             cardClass={styles.lightGreen} 
         />
         <CategoryCard 
             href='#!' 
-            name={'Агрохимия'} 
+            name={'Сеялки'} 
             imgSrc={'/Image11.png'} 
             cardClass={styles.lightYellow} 
         />
         <CategoryCard 
             href='#!' 
-            name={'Спец. техника'} 
+            name={'Косилки'} 
             imgSrc={'/Image12.png'} 
             cardClass={styles.gray50} 
         />
