@@ -38,6 +38,9 @@
     position: relative;
     align-items: center;
     @include res('gap', 32px);
+    &.active .sortBtn svg{
+        transform: rotate(180deg);
+    }
     .sortText{
         color: var(--Gray-500, #868686);
         font-weight: 600;
@@ -46,7 +49,6 @@
     .sortBtn{
         color: var(--Black-Green, #142B02);
         display: flex;
-        padding: 16px 24px;
         align-items: center;
         font-weight: 500;
         @include res('gap', 24px);
@@ -56,23 +58,254 @@
         @include res('padding-left', 24px);
         @include res('font-size', 24px);
         svg{
+            transition: all 0.2s ease-in-out;
             @include res('width', 32px);
             @include res('height', 32px);
         }
     }
     .menu{
         position: absolute;
-        bottom: -100%;
-        background-color: white;
+        background: var(--Green-50, #FAFFF6);
         display: flex;
         flex-direction: column;
         @include res('width', 286px);
         @include res('border-radius', 12px);
+        @include res('bottom', -220px);
+        @include res('left', 240px);
         .menuLink{
+            cursor: pointer;
             @include res('padding-top', 16px);
             @include res('padding-bottom', 16px);
             @include res('padding-right', 24px);
             @include res('padding-left', 24px);
         }
+    }
+}
+
+.cardsCtr {
+    display: flex;
+    flex-direction: column;
+    @include res('gap', 44px);
+    .truckCard {
+        display: flex;
+        align-items: center;
+        @include res('gap', 24px);
+        .truckImg {
+            @include res('width', 306px);
+            @include res('height', 306px);
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-self: stretch;
+            @include res('width', 636px);
+            .nameLike {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                svg {
+                    cursor: pointer;
+                    @include res('width', 36px);
+                    @include res('height', 36px);
+                }
+            }
+            .heading {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                @include res('gap', 8px);
+                .name {
+                    color: var(--Green-600, #439F00);
+                }
+            }
+            .descr {
+                align-self: stretch;
+                overflow: hidden;
+                color: var(--Gray-500, #868686);
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-weight: 500;
+                @include res('height', 103px);
+                @include res('font-size', 20px);
+                @include res('line-height',28px );
+            }
+            .footerInfo {
+                display: flex;
+                flex-direction: column;
+                @include res('gap', 4px);
+                .adress {
+                    color: var(--Gray-500, #868686);
+                    @include res('font-size', 20px);
+                }
+            }
+        }
+        .companyInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            align-self: stretch;
+            @include res('width', 306px);
+            .companyHeading {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @include res('gap', 8px);
+                .companyImg {
+                    @include res('width', 96px);
+                    @include res('height', 64px);
+                }
+                .companyName {
+                    font-weight: 600;
+                    @include res('font-size', 16px);
+                }
+                .feedback {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-self: stretch;
+                    .starsScore {
+                        display: flex;
+                        align-items: center;
+                        @include res('gap', 4px);
+                        .score {
+                            font-weight: 600;
+                            @include res('font-size', 16px);
+                        }
+                        .stars {
+                            display: flex;
+                            align-items: center;
+                            @include res('gap', 4px);
+                            svg {
+                                @include res('width', 20px);
+                                @include res('height', 20px);
+                            }
+                        }
+                    }
+                    .comments {
+                        color: var(--Gray-600, #727272);
+                        @include res('font-size', 16px);
+                    }
+                }
+            }
+            .btns {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                @include res('gap', 8px);
+                .callBtn,
+                .textBtn {
+                    width: 100%;
+                    text-decoration: none;
+                    button{
+                        width: 100%;
+                        font-weight: 600;
+                        @include res('padding-top', 12px);
+                        @include res('padding-bottom', 12px);
+                        @include res('padding-left', 16px);
+                        @include res('padding-right', 16px);
+                        @include res('border-radius', 8px);
+                        @include res('font-size', 20px);
+                    }
+                }
+                .callBtn button {
+                    background: var(--Green-500, #63E80E);
+                }
+                .textBtn button {
+                    border-style: solid;
+                    border-color: #63E80E;
+                    color: #439F00;
+                    @include res('border-width', 1px);
+                }
+            }
+        }
+    }
+}
+
+.tags{
+    display: inline-flex;
+    align-items: center;
+    @include res("gap", 6px);
+    @include res("bottom", 8px);
+    @include res("left", 8px);
+    @include media(1024){
+        @include rest("gap", 4px);
+        @include rest("bottom", 8px);
+        @include rest("left", 4px);
+    }
+    @include media(768){
+        @include resm("gap", 4px);
+        @include resm("bottom", 4px);
+        @include resm("left", 4px);
+    }
+    @include media(576){
+        @include resa("gap", 2px);
+        @include resa("bottom", 4px);
+        @include resa("left", 4px);
+    }
+    .green,
+    .red,
+    .secondGreen,
+    .yellowTag,
+    .otherTags{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        color: white;
+        @include res("gap", 10px);
+        @include res("padding-top", 2px);
+        @include res("padding-right", 8px);
+        @include res("padding-left", 8px);
+        @include res("padding-bottom", 4px);
+        @include res("font-size", 12px);   
+        @include res("border-radius", 49px);
+        @include media(1024){
+            @include rest("gap", 10px);
+            @include rest("padding-top", 2px);
+            @include rest("padding-right", 6px);
+            @include rest("padding-left", 6px);
+            @include rest("padding-bottom", 4px);
+            @include rest("font-size", 12px);   
+            @include rest("border-radius", 49px);
+        }
+        @include media(768){
+            @include resm("gap", 10px);
+            @include resm("padding-top", 2px);
+            @include resm("padding-right", 6px);
+            @include resm("padding-left", 6px);
+            @include resm("padding-bottom", 2px);
+            @include resm("font-size", 10px);   
+            @include resm("border-radius", 49px);
+        }
+        @include media(576){
+            @include resa("gap", 10px);
+            @include resa("padding-top", 0px);
+            @include resa("padding-right", 4px);
+            @include resa("padding-left", 4px);
+            @include resa("padding-bottom", 0px);
+            @include resa("font-size", 8px);   
+            @include resa("border-radius", 49px);
+        }
+    }
+    .red{
+        background: #F22;
+    }
+    .green{
+        background: #60CD1A;
+    }
+    .secondGreen{
+        background: var(--Green-400, #8DF04A);
+        color: var(--Black-Green, #142B02) !important;
+    }
+    .yellowTag{
+        background: var(--Yellow-300, #FFF26D);
+        color: var(--Black-Green, #142B02) !important;
+    }
+    .otherTags{
+        background: var(--Gray-600, #727272);
     }
 }
